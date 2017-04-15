@@ -1,0 +1,26 @@
+{
+  "name": "goalify-minisite.gitlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/goalify/goalify-minisite.git"
+  },
+  "author": "Thanh Tran <trongthanh@gmail.com> (http://int3ractive.com)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://gitlab.com/goalify/goalify-minisite/issues"
+  },
+  "homepage": "https://gitlab.com/goalify/goalify-minisite#README",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-nau": "^12.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
+  }
+}
