@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title><%= fontName %></title>
+		<style>
+			@font-face {
+				font-family: '<%= fontName %>';
+				src: url('../<%= fontPath %>/<%= fontName %>.eot');
+				src: url('../<%= fontPath %>/<%= fontName %>.eot?#iefix') format('embedded-opentype'),
+					url('../<%= fontPath %>/<%= fontName %>.woff') format('woff'),
+					url('../<%= fontPath %>/<%= fontName %>.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			.<%= className %> {
+				font-family: '<%= fontName %>';
+				display: inline-block;
+				line-height: 1;
+				font-weight: normal;
+				font-style: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-transform: none;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			<% _.each(glyphs, function(glyph) { %>
+			.<%= className %>--<%= glyph.name %>:before {
+				content: '\<%= glyph.codepoint.toString(16) %>'
+			}
+			<% }); %>
+
+
+			body { font-family: Gill Sans; text-align: center; background: #f7f7f7 }
+			body > h1 { color: #666; margin: 1em 0 }
+			.glyph { padding: 0 }
+			.glyph > li { display: inline-block; margin: .3em .2em; width: 5em; height: 6.5em; background: #fff; border-radius: .5em; position: relative }
+			.glyph > li .icon { display: block; margin-top: 0.6em; font-size: 2em; margin-bottom: 0.2em;}
+			.glyph > li:hover .icon { color: #8c6b4a; }
+			.glyph-name { font-size: .8em; color: #666; display: block; white-space: nowrap;}
+			.glyph-codepoint { color: #999; font-family: monospace }
+
+		</style>
+	</head>
+	<body>
+		<h1><%= fontName %></h1>
+		<ul class="glyph"><% _.each(glyphs, function(glyph) { %>
+			<li>
+				<i class="<%= className %> <%= className %>--<%= glyph.name %>"></i>
+				<span class="glyph-name">.icon--<%= glyph.name %></span>
+				<span class="glyph-codepoint"><%= glyph.codepoint.toString(16).toUpperCase() %></span>
+			</li><% }); %>
+		</ul>
+	</body>
+</html>
