@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Goalify
 subtitle:
 description:
-author: John Doe
-language:
+author: Goalify Team
+language: en
 timezone:
 
 # URL
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category:
 category_map:
 tag_map:
 
@@ -61,9 +61,7 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
+theme: goalify
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

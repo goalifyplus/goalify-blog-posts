@@ -37,5 +37,14 @@
     "run-sequence": "^1.2.2",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "hexo": "^3.3.1",
+    "hexo-cli": "^1.0.2",
+    "hexo-generator-archive": "^0.1.4",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-index": "^0.2.1",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-server": "^0.2.0"
   }
 }
