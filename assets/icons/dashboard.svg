@@ -1,78 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns:figma="http://www.figma.com/figma/ns"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FEEEF3;}
-	.st1{fill:#F66290;}
-	.st2{fill:#FFFFFF;}
-	.st3{fill:#E1F2FA;}
-</style>
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
 <title>41-web-seo-internet-layout</title>
 <desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-2174 -6784)" figma:type="canvas">
-	<g id="_x34_1-web-seo-internet-layout" figma:type="frame">
-		<g id="Layer_1_1_" figma:type="vector">
-			<g transform="translate(2175 6785)">
-				<path id="path0_fill" class="st0" d="M2182.7,6792.7h494.7v494.7h-494.7V6792.7z"/>
-			</g>
-			<g transform="translate(2175 6785)">
-				<path id="path1_stroke" class="st1" d="M2182.7,6792.7v-8.7c-4.8,0-8.7,3.9-8.7,8.7H2182.7z M2677.3,6792.7h8.7
-					c0-4.8-3.9-8.7-8.7-8.7V6792.7z M2677.3,7287.3v8.7c4.8,0,8.7-3.9,8.7-8.7H2677.3z M2182.7,7287.3h-8.7c0,4.8,3.9,8.7,8.7,8.7
-					V7287.3z M2182.7,6801.3h494.7V6784h-494.7V6801.3z M2668.7,6792.7v494.7h17.3v-494.7H2668.7z M2677.3,7278.7h-494.7v17.3h494.7
-					V7278.7z M2191.3,7287.3v-494.7H2174v494.7H2191.3z"/>
-			</g>
-		</g>
-		<g id="Layer_2" figma:type="vector">
-			<g transform="translate(2175 6794.24)">
-				<path id="path2_fill" class="st2" d="M2182.7,6901.5H2341v385.9h-158.3V6901.5z"/>
-			</g>
-			<g transform="translate(2175 6794.24)">
-				<path id="path3_stroke" class="st1" d="M2182.7,6901.5v-8.7c-4.8,0-8.7,3.9-8.7,8.7H2182.7z M2341,6901.5h8.7
-					c0-4.8-3.9-8.7-8.7-8.7V6901.5z M2341,7287.3v8.7c4.8,0,8.7-3.9,8.7-8.7H2341z M2182.7,7287.3h-8.7c0,4.8,3.9,8.7,8.7,8.7
-					V7287.3z M2182.7,6910.1H2341v-17.3h-158.3V6910.1z M2332.3,6901.5v385.9h17.3v-385.9H2332.3z M2341,7278.7h-158.3v17.3H2341
-					V7278.7z M2191.3,7287.3v-385.9H2174v385.9H2191.3z"/>
-			</g>
-		</g>
-		<g id="Layer_3" figma:type="vector">
-			<g transform="translate(2175 6785)">
-				<path id="path4_fill" class="st0" d="M2182.7,6792.7h494.7v108.8h-494.7V6792.7z"/>
-			</g>
-			<g transform="translate(2175 6785)">
-				<path id="path5_stroke" class="st1" d="M2182.7,6792.7v-8.7c-4.8,0-8.7,3.9-8.7,8.7H2182.7z M2677.3,6792.7h8.7
-					c0-4.8-3.9-8.7-8.7-8.7V6792.7z M2677.3,6901.5v8.7c4.8,0,8.7-3.9,8.7-8.7H2677.3z M2182.7,6901.5h-8.7c0,4.8,3.9,8.7,8.7,8.7
-					V6901.5z M2182.7,6801.3h494.7V6784h-494.7V6801.3z M2668.7,6792.7v108.8h17.3v-108.8H2668.7z M2677.3,6892.8h-494.7v17.3h494.7
-					V6892.8z M2191.3,6901.5v-108.8H2174v108.8H2191.3z"/>
-			</g>
-		</g>
-		<g id="Layer_4" figma:type="vector">
-			<g transform="translate(2195.58 6800.54)">
-				<path id="path6_fill" class="st3" d="M2425.1,6980.6h173.1H2425.1z"/>
-			</g>
-			<g transform="translate(2195.58 6800.54)">
-				<path id="path7_stroke" class="st1" d="M2425.1,6972c-4.8,0-8.7,3.9-8.7,8.7c0,4.8,3.9,8.7,8.7,8.7V6972z M2598.2,6989.3
-					c4.8,0,8.7-3.9,8.7-8.7c0-4.8-3.9-8.7-8.7-8.7V6989.3z M2425.1,6989.3h173.1V6972h-173.1V6989.3z"/>
-			</g>
-		</g>
-		<g id="Layer_5" figma:type="vector">
-			<g transform="translate(2195.58 6804.42)">
-				<path id="path6_fill_1_" class="st3" d="M2425.1,7026.3h173.1H2425.1z"/>
-			</g>
-			<g transform="translate(2195.58 6804.42)">
-				<path id="path7_stroke_1_" class="st1" d="M2425.1,7017.7c-4.8,0-8.7,3.9-8.7,8.7s3.9,8.7,8.7,8.7V7017.7z M2598.2,7035
-					c4.8,0,8.7-3.9,8.7-8.7s-3.9-8.7-8.7-8.7V7035z M2425.1,7035h173.1v-17.3h-173.1V7035z"/>
-			</g>
-		</g>
-		<g id="Layer_6" figma:type="vector">
-			<g transform="translate(2195.58 6808.3)">
-				<path id="path8_fill" class="st3" d="M2425.1,7072h74.2H2425.1z"/>
-			</g>
-			<g transform="translate(2195.58 6808.3)">
-				<path id="path9_stroke" class="st1" d="M2425.1,7063.4c-4.8,0-8.7,3.9-8.7,8.7c0,4.8,3.9,8.7,8.7,8.7V7063.4z M2499.3,7080.7
-					c4.8,0,8.7-3.9,8.7-8.7c0-4.8-3.9-8.7-8.7-8.7V7080.7z M2425.1,7080.7h74.2v-17.3h-74.2V7080.7z"/>
-			</g>
-		</g>
-	</g>
+<g>
+	<path fill="#F66290" d="M496.6,7H15.4C10.8,7,7,10.8,7,15.4v105.9v0v375.3v0c0,4.7,3.8,8.4,8.4,8.4h154c0,0,0,0,0.1,0h327.1
+		c4.7,0,8.4-3.8,8.4-8.4V121.3V15.4C505,10.8,501.2,7,496.6,7z M488.2,112.9H23.8v-89h464.3V112.9z M488.2,488.2H177.8V129.7h310.3
+		V488.2z M23.8,488.2V129.7H161v358.5H23.8z"/>
+	<path fill="#F66290" d="M251.2,206.7h168.4c4.7,0,8.4-3.8,8.4-8.4s-3.8-8.4-8.4-8.4H251.2c-4.7,0-8.4,3.8-8.4,8.4
+		S246.5,206.7,251.2,206.7z"/>
+	<path fill="#F66290" d="M251.2,251.1h168.4c4.7,0,8.4-3.8,8.4-8.4s-3.8-8.4-8.4-8.4H251.2c-4.7,0-8.4,3.8-8.4,8.4
+		S246.5,251.1,251.2,251.1z"/>
+	<path fill="#F66290" d="M323.4,278.7h-72.2c-4.7,0-8.4,3.8-8.4,8.4c0,4.7,3.8,8.4,8.4,8.4h72.2c4.7,0,8.4-3.8,8.4-8.4
+		C331.8,282.5,328,278.7,323.4,278.7z"/>
 </g>
 </svg>

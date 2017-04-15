@@ -68,7 +68,7 @@ gulp.task('iconfont', () => {
 				)),
 				className: 'icon',
 				fontName,
-				fontPath: paths.distFonts
+				fontPath: paths.srcFonts
 			};
 
 			// generate _icons.scss
