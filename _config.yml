@@ -7,7 +7,7 @@ title: Goalify
 subtitle:
 description:
 author: Goalify Team
-language: en
+language:
 timezone:
 
 # URL
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category:
+default_category: uncategorized
 category_map:
 tag_map:
 
