@@ -6,14 +6,21 @@
 
 // Glyphicons
 @import 'common/icons';
+
+// base layout
 @import 'common/normalize';
 @import 'common/layout';
+
+//flexbox
+@import 'common/flexboxgrid';
 
 // common elements styles
 @import 'common/button';
 @import 'common/register-form';
 @import 'common/media';
 
-// sites styles
-@import 'site/product'
-// For print
+//site
+@import 'site/header';
+@import 'site/footer';
+@import 'site/home';
+@import 'site/product';
