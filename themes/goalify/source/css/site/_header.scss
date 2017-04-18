@@ -1,0 +1,48 @@
+.header {
+	height: 100%;
+	position: relative;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	padding: 35px 130px 100px;
+
+	&__logo {
+		position: absolute;
+		top: 25px;
+		left: 130px;
+	}
+
+	&__title {
+		font-size: 48px;
+		font-weight: 300;
+		color: $white;
+		line-height: 1.41;
+		max-width: 660px;
+		margin-top: 80px;
+	}
+
+	&__desc {
+		color: $white;
+		max-width: 510px;
+		margin-top: 25px;
+		font-size: 18px;
+		line-height: 1.56;
+		font-weight: 300;
+	}
+
+	&__image {
+		position: absolute;
+		right: 0;
+		top: 170px;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+
+	&__item {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $white;
+		padding: 15px 25px;
+	}
+}

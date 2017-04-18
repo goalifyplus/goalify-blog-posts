@@ -1,0 +1,29 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 60px 0 180px 150px;
+
+	&__info {
+		display: flex;
+	}
+
+	&__info-section {
+		margin-left: 30px;
+		margin-right: 30px;
+		font-size: 15px;
+		font-weight: 300;
+		color: rgb(117, 117, 117);
+
+		&__title {
+			line-height: 1.2;
+			text-transform: uppercase;
+		}
+
+		&__nav {
+			margin: 10px 0 0;
+			padding: 0;
+			list-style: none;
+			line-height: 2;
+		}
+	}
+}
