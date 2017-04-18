@@ -1,0 +1,32 @@
+.media {
+	display: inline-block;
+
+	&__item {
+		display: inline-flex;
+		margin-bottom: 10rem;
+	}
+
+	&__content {
+		// width: 200px;
+		line-height: 1;
+	}
+
+	&__icon {
+		font-size: 4.2rem;
+		color: crimson;
+		margin-right: 4.5rem;
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 600;
+		color: $dark-blue;
+		display: inline-block;
+		margin-bottom: 1.5rem;
+	}
+
+	&__desc {
+		color: $dark-grey;
+		margin: 0;
+	}
+}

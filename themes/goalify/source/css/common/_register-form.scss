@@ -1,0 +1,40 @@
+.register {
+	background-color: #D28BCC;
+	text-align: center;
+	padding: 10rem 0;
+
+	&__title {
+		font-size: $main-title;
+		font-weight: normal;
+		color: $white;
+		margin: 0;
+		line-height: 1.1;
+	}
+
+	&__sub-title {
+		display: block;
+		margin-top: 2rem;
+		color: $white;
+	}
+
+	&__form-wrapper {
+		margin-top: 3rem;
+	}
+
+	&__form {
+		min-width: 37.5rem;
+		font-size: 1.4rem;
+		padding: 1.5rem 2rem;
+		outline: none;
+		border-radius: 3px;
+		border: none;
+		margin-right: 1.5rem;
+	}
+
+	&__desc {
+		display: block;
+		color: $white;
+		margin-top: 2.5rem;
+	}
+}
+

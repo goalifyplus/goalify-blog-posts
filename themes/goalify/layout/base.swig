@@ -25,7 +25,7 @@
 
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,600,700,900,300,100&subset=latin,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,900,300,100&subset=latin,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
 
 	{% block stylesheet %}
 	<link rel="stylesheet" href="{{ url_for('css/main.css') }}">
