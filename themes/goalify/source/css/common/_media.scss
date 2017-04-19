@@ -1,19 +1,14 @@
 .media {
-	display: inline-block;
-
-	&__item {
-		display: inline-flex;
-		margin-bottom: 10rem;
-	}
+	display: inline-flex;
+	margin-bottom: 10rem;
 
 	&__content {
-		// width: 200px;
 		line-height: 1;
 	}
 
 	&__icon {
-		font-size: 4.2rem;
-		color: crimson;
+		width: 4.2rem;
+		height: 4.2rem;
 		margin-right: 4.5rem;
 	}
 
@@ -28,5 +23,7 @@
 	&__desc {
 		color: $dark-grey;
 		margin: 0;
+		font-weight: lighter;
+		line-height: 1.6;
 	}
 }
