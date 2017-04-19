@@ -1,7 +1,178 @@
 .home {
 	&__register {
 		max-width: 1080px;
-		margin: 60px auto 0;
+		margin: 60px auto 150px;
 		background-color: $purple;
+	}
+
+	&__revenue {
+		height: 100%;
+		margin-top: 150px;
+		background-image: linear-gradient(-224deg, #30C6D6 0%, #38CEAD 100%);
+		margin-bottom: 70px;
+
+		&__image {
+			width: 100%;
+			position: relative;
+			top: -150px;
+		}
+	}
+
+	&__register-bottom {
+		display: flex;
+		font-size: 30px;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 80px;
+
+		&__title {
+			> .highlight {
+				display: block;
+				line-height: 1.2;
+				color: #6772E5;
+			}
+		}
+	}
+}
+
+.home-section {
+	margin-bottom: 180px;
+	padding-left: 30px;
+
+	&__image {
+		box-shadow: 0 2px 60px rgba(0, 0, 0, 0.14);
+		width: 100%;
+	}
+
+	&__content {
+		padding-left: 70px;
+		padding-right: 50px;
+
+		&__title {
+			color: $dark-blue;
+			font-size: $sub-title;
+			line-height: 1.2;
+			position: relative;
+			font-weight: 400;
+			margin-bottom: 50px;
+			margin-top: 0;
+
+			&::after {
+				display: block;
+				content: ' ';
+				width: 50px;
+				height: 2px;
+				background: $pink;
+				margin-top: 40px;
+			}
+		}
+
+		&__icon {
+			font-size: 60px;
+			color: $pink;
+		}
+
+		&__sub-title {
+			font-size: 24px;
+			font-weight: 300;
+			margin-top: 30px;
+			margin-bottom: 15px;
+			color: #362E72;
+		}
+
+		&__desc {
+			color: $dark-grey;
+			font-weight: 300;
+			line-height: 1.6;
+			margin-bottom: 40px;
+		}
+
+		&__more {
+			display: block;
+			margin-bottom: 35px;
+			color: #142696;
+		}
+	}
+
+	&:nth-child(2n + 1) {
+		flex-direction: row-reverse;
+	}
+}
+
+.home-customer {
+	text-align: center;
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 200px;
+	position: relative;
+
+	&__icon {
+		font-size: 12.4rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: #d8d8d8;
+	}
+
+	&__title {
+		font-size: $main-title;
+		color: $dark-blue;
+		margin-bottom: 6rem;
+	}
+
+	&__commend-list {
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		align-items: center;
+	}
+
+	&__commend-item {
+		input[type=radio] {
+			+ label {
+				padding: 0 2rem;
+				display: inline-block;
+
+				> img {
+					width: 60px;
+					height: 60px;
+					opacity: 0.34;
+					transition: opacity ease 0.2s;
+				}
+
+				+ .home-customer__commend-item__desc {
+					display: none;
+					height: 100%;
+
+					.text {
+						font-size: 24px;
+						margin-bottom: 40px;
+					}
+				}
+			}
+
+			&:checked {
+				+ label {
+					> img {
+						width: 95px;
+						height: 95px;
+						opacity: 1;
+					}
+
+					+ .home-customer__commend-item__desc {
+						width: 780px;
+						display: block;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						padding: 2rem;
+						top: 100%;
+					}
+				}
+			}
+		}
 	}
 }

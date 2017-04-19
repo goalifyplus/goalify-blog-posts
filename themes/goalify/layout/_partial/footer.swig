@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
 	<div class="container-fluid container-fluid--fixed footer-container">
 		<div class="footer-container__language">English</div>
 			<div class="footer-container__info">
