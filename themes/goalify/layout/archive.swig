@@ -7,7 +7,11 @@
 		<ul>
 			<li><a href="{{ url_for(config.archive_dir ) }}">All</a></li>
 			{% for tag in site.tags %}
-				<li><a href="{{ url_for(tag.path ) }}">#{{ tag.name}}</a></li>
+				<li><a href="{{ url_for(tag.path ) }}">#{{ tag.name}}</a>
+				{% if tag.name === page.tag %}
+					> Active
+				{% endif %}
+				</li>
 			{% endfor %}
 		</ul>
 		{% for item in page.posts %}
