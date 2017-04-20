@@ -1,8 +1,10 @@
 .media {
-	display: inline-flex;
+	display: table;
 	margin-bottom: 10rem;
 
 	&__content {
+		display: table-cell;
+		vertical-align: top;
 		line-height: 1;
 	}
 

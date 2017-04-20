@@ -8,9 +8,9 @@
         <g id="Product" transform="translate(-489.000000, -2215.000000)" stroke-width="1.47">
             <g id="43-communications-headphones-support" transform="translate(490.000000, 2216.000000)">
                 <path d="M8.4,8.4 L0,8.4 L0,8.4 L0,37.8030705 C0,40.118106 1.88040405,42 4.2,42 C6.52010596,42 8.4,40.1209707 8.4,37.8030705" id="Layer-1" stroke="#F66290" fill="#FFFFFF"></path>
-                <path d="M3.56865131,42 L37.8013564,42 C40.116055,42 42,40.1195839 42,37.7999732 L42,0 L8.4375293,0 L8.4,0 L8.4,37.8028922 C8.4,40.1208908 6.52281042,42 4.19730262,42 L3.56865131,42 L3.56865131,42 Z" id="Layer-2" stroke="#F66290" fill="#FEEEF3"></path>
+                <path d="M37.8013564,42 C40.116055,42 42,40.1195839 42,37.7999732 L42,0 L8.4375293,0 L8.4,37.8028922 C8.4,40.1208908 6.52281042,42 4.19730262,42 L3.56865131,42 L37.8013564,42 Z" id="Layer-2" stroke="#F66290" fill="#FEEEF3"></path>
                 <rect id="Layer-3" stroke="#F76290" fill="#FFFFFF" x="12.6" y="4.2" width="10.5" height="12.6"></rect>
-                <polyline id="Layer-4" stroke="#1565C0" fill="#E2F3FB" points="12.6 21 22.3777969 21 37.8 21"></polyline>
+                <polyline id="Layer-4" stroke="#F66290" fill="#E2F3FB" points="12.6 21 22.3777969 21 37.8 21"></polyline>
                 <path d="M12.6,25.2 L37.8,25.2" id="Layer-5" stroke="#F76290" fill="#E2F3FB"></path>
                 <path d="M12.6,29.4 L37.8,29.4" id="Layer-6" stroke="#F76290" fill="#E2F3FB"></path>
                 <path d="M12.6,33.6 L37.8,33.6" id="Layer-7" stroke="#F76290" fill="#E2F3FB"></path>
