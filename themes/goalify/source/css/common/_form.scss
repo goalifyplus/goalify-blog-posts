@@ -1,0 +1,174 @@
+.textfield {
+	display: block;
+	padding-top: 15px;
+	margin-bottom: 20px;
+	position: relative;
+
+	> label {
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 100%;
+		color: rgba(0, 0, 0, 0.54);
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 15px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		transition: all 0.15s ease-out;
+	}
+
+	> textarea {
+		padding-top: 5px;
+	}
+
+	> input,
+	> textarea {
+		&:focus ~ label {
+			color: blue;
+		}
+	}
+}
+
+.textfield--float-label {
+	> label {
+		// Layout
+		position: absolute;
+		transform: translate(0, 15px);
+
+		// Typography
+		font-size: 16px;
+		line-height: 32px;
+		color: rgba(0, 0, 0, 0.26);
+
+		// Overflow policy
+		text-overflow: clip;
+
+		// Cursor
+		cursor: text;  // for ie10
+		pointer-events: none;
+	}
+
+	> input,
+	> textarea {
+		&:focus ~ label {
+			transform: translate(0, 0);
+			font-size: 12px;
+			line-height: 15px;
+			text-overflow: ellipsis;
+		}
+
+		&:not(:focus) {
+			&[value]:not([value='']),
+			&:not(:empty) {
+				~ label {
+					color: rgba(0, 0, 0, 0.54);
+					font-size: 12px;
+					line-height: 15px;
+					transform: translate(0, 0);
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+}
+
+.textfield > input,
+.textfield > textarea {
+	box-sizing: border-box;
+	display: block;
+	background-color: transparent;
+	color: rgba(0, 0, 0, 0.87);
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+	outline: none;
+	width: 100%;
+	padding: 0;
+	box-shadow: none;
+	border-radius: 0;
+
+	// Typography
+	font-size: 16px;
+	font-family: inherit;
+	line-height: inherit;
+
+	// Bugfix for firefox-android
+	background-image: none;
+
+	&:focus {
+		border-color: #2196F3;
+		border-width: 2px;
+	}
+
+	&:disabled,
+	&:read-only {
+		cursor: not-allowed;
+		background-color: transparent;
+		opacity: 1;  // iOS fix for unreadable disabled content
+	}
+
+	&::placeholder {
+		color: rgba(0, 0, 0, 0.26);
+		opacity: 1;
+	}
+}
+
+.textfield > input {
+	height: 32px;
+
+	// Compensate for height change on focus
+	&:focus {
+		height: 33px;
+		margin-bottom: -1px;
+	}
+}
+
+.textfield > textarea {
+	min-height: 64px;
+
+	// Compensate for height change on focus
+	&[rows]:not([rows='2']):focus {
+		margin-bottom: -1px;
+	}
+}
+
+.textfield > input:focus {
+	// Compensate for height change on focus
+	height: 33px;
+	margin-bottom: -1px;
+}
+
+// Treat <input>'s different from <textarea>'s
+.textfield > input:invalid:not(:focus) {
+	&:not(:required) {
+		height: 33px;
+		margin-bottom: -1px;
+	}
+}
+
+// set label color for invalid inputs
+.textfield {
+	// has floating label
+	&.textfield--float-label {
+		> input:invalid:not(:focus),
+		> textarea:invalid:not(:focus) {
+			&:not(:required) {
+				~ label {
+					color: red;
+				}
+			}
+		}
+	}
+
+	// doesn't have floating label
+	&:not(.textfield--float-label) {
+		> input:invalid:not(:focus),
+		> textarea:invalid:not(:focus) {
+			&:not(:required) {
+				~ label {
+					color: red;
+				}
+			}
+		}
+	}
+}

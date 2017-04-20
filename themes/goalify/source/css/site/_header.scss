@@ -2,11 +2,12 @@
 	height: 100%;
 	position: relative;
 	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	overflow: hidden;
 
 	&__container {
 		position: relative;
-		padding-top: 35px;
-		padding-bottom: 100px;
+		padding-top: 3.5rem;
+		padding-bottom: 10rem;
 
 		&__logo {
 			position: absolute;
@@ -20,12 +21,12 @@
 			color: $white;
 			line-height: 1.41;
 			max-width: 56%;
-			margin-top: 80px;
+			margin-top: 8rem;
 		}
 
 		&__desc {
 			color: $white;
-			max-width: 510px;
+			max-width: 51rem;
 			margin-top: 25px;
 			font-size: 18px;
 			line-height: 1.56;
@@ -34,8 +35,8 @@
 
 		&__image {
 			position: absolute;
-			right: 0;
-			top: 170px;
+			right: -7rem;
+			top: 17rem;
 			width: 50%;
 		}
 	}
@@ -50,5 +51,24 @@
 		text-decoration: none;
 		color: $white;
 		padding: 15px 25px;
+
+		&--login {
+			padding-left: 5rem;
+			position: relative;
+
+			&::before {
+				content: ' ';
+				display: block;
+				width: 1px;
+				height: 2rem;
+				background: #9290D6;
+				position: absolute;
+				left: 3rem;
+			}
+		}
+
+		&--btn {
+			background: rgba(255, 255, 255, 0.14);
+		}
 	}
 }
