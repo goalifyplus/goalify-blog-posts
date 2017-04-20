@@ -1,0 +1,43 @@
+.job {
+	&__team-info {
+		margin-bottom: 80px;
+
+		&__title {
+			font-size: $sub-title;
+			color: $dark-blue;
+			text-align: center;
+			margin-top: 10rem;
+			margin-bottom: 10rem;
+		}
+	}
+}
+
+.job-current {
+	color: $white;
+	background: linear-gradient(-90deg, #FFC75E 0%, #F03DA2 100%);
+	padding-top: 9rem;
+	padding-bottom: 7rem;
+
+	&__title {
+		font-size: $sub-title;
+		margin-bottom: 7rem;
+		text-align: center;
+	}
+
+	&__list {
+		max-width: 800px;
+		margin: auto;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 3rem;
+
+		&__title {
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+}
