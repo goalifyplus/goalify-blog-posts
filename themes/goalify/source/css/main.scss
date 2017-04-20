@@ -9,15 +9,17 @@
 
 // base layout
 @import 'common/normalize';
-@import 'common/layout';
 
 //flexbox
 @import 'common/flexboxgrid';
+@import 'common/layout';
+@import 'common/responsive-utilities';
 
 // common elements styles
 @import 'common/button';
 @import 'common/register-form';
 @import 'common/media';
+@import 'common/form';
 
 //site
 @import 'site/header';
@@ -25,3 +27,6 @@
 @import 'site/home';
 @import 'site/product';
 @import 'site/pricing';
+@import 'site/job';
+@import 'site/career';
+@import 'site/contact-us';

@@ -7,10 +7,18 @@
 	color: $white;
 	border: none;
 	text-align: center;
+
+	+ .btn {
+		margin-left: 15px;
+	}
 }
 
 .btn--transparent {
 	background-color: transparent;
 	border: 1px solid;
 	color: $purple;
+}
+
+.btn--purple {
+	background-color: $purple;
 }
