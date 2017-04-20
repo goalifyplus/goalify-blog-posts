@@ -24,6 +24,9 @@
 	}
 
 	&__package {
+		max-width: 40rem;
+		width: 100%;
+		margin: auto;
 		text-align: center;
 		padding: 3rem 2.5rem 4rem;
 		border: 1px solid $border-color;
@@ -229,6 +232,7 @@
 
 			+ .btn  {
 				margin-top: 1rem;
+				margin-left: 0;
 			}
 		}
 
