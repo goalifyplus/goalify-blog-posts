@@ -267,9 +267,9 @@
 	order: 1;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: $screen-sm-min) {
 	.container {
-		width: 49rem;
+		width: $screen-sm-min + 10;
 	}
 
 	.col-sm,
@@ -498,9 +498,9 @@
 	}
 }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: $screen-md-min) {
 	.container {
-		width: 65rem;
+		width: $screen-sm-min + 10;
 	}
 
 	.col-md,
@@ -729,9 +729,9 @@
 	}
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: $screen-lg-min) {
 	.container {
-		width: 76rem;
+		width: $screen-lg-min + 10;
 	}
 
 	.col-lg,
