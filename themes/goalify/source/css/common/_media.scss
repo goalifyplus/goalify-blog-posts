@@ -1,0 +1,31 @@
+.media {
+	display: table;
+	margin-bottom: 10rem;
+
+	&__content {
+		display: table-cell;
+		vertical-align: top;
+		line-height: 1;
+	}
+
+	&__icon {
+		width: 4.2rem;
+		height: 4.2rem;
+		margin-right: 4.5rem;
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 600;
+		color: $dark-blue;
+		display: inline-block;
+		margin-bottom: 1.5rem;
+	}
+
+	&__desc {
+		color: $dark-grey;
+		margin: 0;
+		font-weight: lighter;
+		line-height: 1.6;
+	}
+}

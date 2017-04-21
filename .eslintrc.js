@@ -5,7 +5,9 @@ module.exports = {
 		'nau',
 	],
 	'rules': {
-		'quote-props': 'off',
+		'no-var': 'off',
+		'strict': 'off',
+		'no-use-before-define': 'off',
 	},
 	'globals': {},
 	'env': {

@@ -1,0 +1,24 @@
+.btn {
+	min-width: 18.5rem;
+	font-size: 1.4rem;
+	padding: 1.5rem 2rem;
+	border-radius: 0.5rem;
+	background-color: $pink;
+	color: $white;
+	border: none;
+	text-align: center;
+
+	+ .btn {
+		margin-left: 15px;
+	}
+}
+
+.btn--transparent {
+	background-color: transparent;
+	border: 1px solid;
+	color: $purple;
+}
+
+.btn--purple {
+	background-color: $purple;
+}

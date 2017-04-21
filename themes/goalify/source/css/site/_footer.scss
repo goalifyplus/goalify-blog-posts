@@ -1,0 +1,51 @@
+.footer {
+	border-top: 1px solid #ecf1f5;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	position: relative;
+
+	&__info {
+		display: flex;
+	}
+
+	&__info-section {
+		margin-left: 60px;
+		font-size: 15px;
+		// font-weight: 400;
+		color: $dark-grey;
+
+		&__title {
+			line-height: 1.2;
+			text-transform: uppercase;
+		}
+
+		&__nav {
+			margin: 10px 0 0;
+			padding: 0;
+			list-style: none;
+			line-height: 2;
+		}
+	}
+
+	&__language {
+		color: $purple;
+		font-weight: 600;
+
+		&__icon {
+			margin-right: 1rem;
+		}
+	}
+
+	&__copyright {
+		position: absolute;
+		bottom: 6rem;
+		left: 2rem;
+		font-size: 14px;
+		color: $dark-grey;
+	}
+}
