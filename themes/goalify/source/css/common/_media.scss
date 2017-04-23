@@ -29,3 +29,18 @@
 		line-height: 1.6;
 	}
 }
+
+.media--vertical {
+	display: block;
+	text-align: center;
+	margin-bottom: 5rem;
+
+	.media__icon {
+		margin: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.media__content {
+		display: block;
+	}
+}
