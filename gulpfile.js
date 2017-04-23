@@ -32,7 +32,7 @@ const paths = {
 	scripts: 'js',
 	styles: 'css',
 	// temporary
-	tmp: '.tmp'
+	tmp: '.tmp',
 };
 
 // other path shorthands
@@ -58,7 +58,7 @@ gulp.task('iconfont', () => {
 		.pipe(g.iconfont({
 			fontName,
 			// autohint: true,
-			formats: ['ttf', 'eot', 'woff2', 'woff']
+			formats: ['ttf', 'eot', 'woff2', 'woff'],
 		}))
 		.on('glyphs', (glyphs) => {
 			const opts = {
@@ -68,7 +68,7 @@ gulp.task('iconfont', () => {
 				)),
 				className: 'icon',
 				fontName,
-				fontPath: paths.srcFonts
+				fontPath: paths.srcFonts,
 			};
 
 			// generate _icons.scss
@@ -121,10 +121,10 @@ gulp.task('styles', () => (
 			outputStyle: (mode === 'dev') ? 'expanded' : 'compressed',
 			precision: 10,
 			includePaths: ['.'],
-			onError: console.error.bind(console, 'Sass error:')
+			onError: console.error.bind(console, 'Sass error:'),
 		}))
 		.pipe(g.postcss([
-			autoprefixer({ browsers: ['last 2 version', 'ie >= 9', 'android >= 4', 'safari >= 7'] })
+			autoprefixer({ browsers: ['last 2 version', 'ie >= 9', 'android >= 4', 'safari >= 7'] }),
 		]))
 		.pipe(g.if(mode === 'dev', g.sourcemaps.write()))
 		.pipe(gulp.dest(paths.srcStyles))
@@ -178,10 +178,10 @@ gulp.task('copy-fonts', () => (
 gulp.task('copy-extras', () => (
 	gulp.src([
 		path.join(paths.src, '/*.*'),
-		path.join(`!${paths.src}`, '/*.html')
+		path.join(`!${paths.src}`, '/*.html'),
 	], {
 		dot: true,
-		base: 'html'
+		base: 'html',
 	}).pipe(gulp.dest(paths.dist))
 ));
 
@@ -228,13 +228,13 @@ function browserSyncInit(baseDir, browser) {
 	let routes = null;
 	if (baseDir === paths.src || (Array.isArray(baseDir) && baseDir.indexOf(paths.src) !== -1)) {
 		routes = {
-			'/bower_components': 'bower_components'
+			'/bower_components': 'bower_components',
 		};
 	}
 
 	const server = {
 		baseDir,
-		routes
+		routes,
 	};
 
 	/*
@@ -249,7 +249,7 @@ function browserSyncInit(baseDir, browser) {
 	browserSync.instance = browserSync.init({
 		startPath: '/',
 		server,
-		browser: br
+		browser: br,
 	});
 }
 

@@ -1,0 +1,25 @@
+backend:
+  name: gitlab
+  repo: https://gitlab.com/goalify/goalify-minisite # Path to your Github repository
+  branch: master # Branch to update
+  site_domain: goalify.netlify.com # Your Netlify site address if different from host
+publish_mode: editorial_workflow
+
+media_folder: source/media/ # path to store media in git folder
+public_folder: media/ # path at src attribute of the media
+
+# Configure for the CMS admin editor
+collections:
+  - name: "blog" # Used in routes, e.g. /admin/collections/blog
+    label: "Goalify Blog" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
