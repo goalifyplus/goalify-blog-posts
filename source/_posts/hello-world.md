@@ -1,5 +1,8 @@
 ---
 title: Hello World
+thumbnail: images/avatar-post.jpeg
+authorName: Hai Luu
+authorAvatar: images/author.jpg
 date: 2017-03-30T18:46:28+07:00
 tags:
   - OKR

@@ -1,0 +1,160 @@
+.blog {
+	&__tags {
+		margin-top: 5rem;
+
+		&__wrapper {
+			padding: 0;
+			text-align: center;
+		}
+
+		&__item {
+			display: inline-block;
+		}
+
+		&__link {
+			text-decoration: none;
+			padding: .8rem 3rem;
+			border-radius: 7rem;
+			color: $black;
+			background-color: transparent;
+			font-size: 1.8rem;
+			font-weight: 600;
+
+			&.active {
+				color: $white;
+				background-color: $tag-color;
+				padding: .8rem 3rem;
+			}
+		}
+	}
+
+	&__posts {
+		margin-top: 7rem;
+	}
+
+	&__post {
+		display: table;
+		padding: 5rem 0;
+		border-bottom: 1px solid $border-color;
+
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		&__thumbnail {
+			width: 15rem;
+			height: 15rem;
+			margin-right: 4rem;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		&__content {
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		&__title {
+			margin: 0;
+			font-size: 1.8rem;
+		}
+
+		&__link {
+			text-decoration: none;
+			color: $black;
+		}
+
+		&__info {
+			display: flex;
+			align-items: center;
+		}
+
+		&__intro {
+			margin-top: 1.2rem;
+			margin-bottom: 1.7rem;
+		}
+
+		&__author-avatar {
+			display: inline-block;
+			width: 4.5rem;
+			height: 4.5rem;
+			background-size: cover;
+			background-position: center center;
+			border-radius: 100%;
+		}
+
+		&__author-name,
+		&__time {
+			padding: 0 2rem;
+			color: rgba(0,0,0,0.3);
+			font-size: 1.4rem;
+		}
+
+		&__author-name {
+			border-right: 1px solid;
+		}
+
+		&__time {
+			padding: 0 2rem;
+		}
+	}
+
+	&__pagination {
+		margin-top: 4rem;
+		margin-bottom: 7rem;
+		position: relative;
+		text-align: center;
+		color: rgba(0,0,0,0.4);
+
+		.extend {
+			@extend .btn;
+			@extend .btn--transparent;
+			border: 1px solid $border-color-2;
+			color: rgba(0,0,0,0.2);
+			min-width: auto;
+			padding: 1.5rem 4rem;
+			text-decoration: none;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.prev {
+			left: 0;
+		}
+
+		.next {
+			right: 0;
+		}
+
+		.total-page {
+			.page-number {
+				display: none;
+
+				&:last-child {
+					display: inline-block;
+					text-decoration: none;
+					color: rgba(0,0,0,0.4);
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	&__register {
+		background-image: linear-gradient(-134deg, #3023AE 0%, #C86DD7 100%);
+
+		.register-form-horizontal__title {
+			color: $white;
+		}
+
+		.register__form {
+			margin-bottom: 0;
+		}
+
+		.btn {
+			background-color: $register-btn;
+		}
+	}
+}

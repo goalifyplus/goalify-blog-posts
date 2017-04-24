@@ -1,12 +1,10 @@
 ---
-title: Sample blog post
+title: Marvel Studio sắp bị phá sản
 thumbnail: images/avatar-post.jpeg
 authorName: Eric Tran
 authorAvatar: images/author.jpg
-date: 2017-04-19T18:46:28+07:00
+date: 2017-04-24T18:46:28+07:00
 tags:
-  - OKR
-  - Product
   - Guideline
 ---
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.

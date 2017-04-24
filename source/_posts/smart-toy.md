@@ -1,11 +1,10 @@
 ---
-title: Sample blog post
+title: Parihug Thú nhồi bông thông minh, giúp ôm người thân từ xa thông qua Internet
 thumbnail: images/avatar-post.jpeg
 authorName: Eric Tran
 authorAvatar: images/author.jpg
 date: 2017-04-19T18:46:28+07:00
 tags:
-  - OKR
   - Product
   - Guideline
 ---

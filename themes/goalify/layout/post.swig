@@ -2,6 +2,7 @@
 
 {% block main %}
 	<main class="main post-page">
+		<h1>ahihi</h1>
 		<article>
 			<header>
 				<h1>{{ page.title }}</h1>
