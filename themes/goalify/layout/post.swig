@@ -1,4 +1,12 @@
 {% extends 'base.swig' %}
+{% block hero-banner %}
+	{{ partial('_partial/hero-banner', {
+		page: {
+			isHeroBannerHeader: true,
+			backgroundHeader: '/images/job-header-banner.jpg'
+		}
+	}) }}
+{% endblock %}
 
 {% block main %}
 	<main class="blog-detail">
