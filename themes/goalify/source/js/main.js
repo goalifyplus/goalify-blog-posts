@@ -8,14 +8,46 @@ var goalify = goalify || {};
 (function() {
 	'use strict';
 
-	var howWeWork = document.querySelector('.how-we-work');
 	var keyCodes = [8, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+	var goalifyContactUrl = 'https://script.google.com/macros/s/AKfycbz5oEQoNpz7Coinl_pLkcv0sQKqDd0XqHBsf_pFoZFYqjXej2s/exec';
+
+	var howWeWork = document.querySelector('.how-we-work');
+	var contactUs = document.querySelector('.contact-us');
 
 	// utils
 	var numberWithCommas = function(x) {
 		var parts = x.toString().split('.');
 		parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 		return parts.join('.');
+	};
+
+	var serialize = function(obj) {
+		var str = [];
+		for(var p in obj) {
+			if (obj.hasOwnProperty(p)) {
+				str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
+			}
+		}
+		return str.join('&');
+	};
+
+	var ajax = function(url, param, success, error) {
+		var request = new XMLHttpRequest();
+		request.open('GET', url + '?' + serialize(param), true);
+
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				success();
+			} else {
+				error();
+			}
+		};
+
+		request.onerror = function() {
+			error();
+		};
+
+		request.send();
 	};
 
 	if (howWeWork) {
@@ -63,6 +95,32 @@ var goalify = goalify || {};
 					result.value = input.value + ' %';
 					resultContainer.style.marginLeft = input.value + '%';
 				}
+			});
+		}
+	}
+
+	if (contactUs) {
+		var contactForm = document.getElementById('contact-form');
+		if (contactForm) {
+			contactForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				var elements = e.target.elements;
+				var param = {};
+				var submit = elements.submit;
+				if (elements && elements.length) {
+					for (var index = 0; index < elements.length - 1; index++) {
+						var element = elements[index];
+						param[element.name] = element.value;
+					}
+				}
+
+				submit.disabled = true;
+				ajax(goalifyContactUrl, param, function() {
+					submit.textContent = 'Thank you';
+				}, function() {
+					submit.disabled = false;
+					alert('Failure');
+				});
 			});
 		}
 	}

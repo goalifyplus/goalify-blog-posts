@@ -4,27 +4,31 @@
 		Please submit your information and our team will following up with you <br>
 		Or just simply <span class="contact-us__desc__highlight">Chat with Us!</span>
 	</p>
-	<form class="contact-us__form">
+	<form id="contact-form" class="contact-us__form">
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input type="text" name="name" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Name*</label>
 		</div>
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input type="text" name="email" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Email*</label>
 		</div>
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input type="text" name="company" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Company name*</label>
 		</div>
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input type="text" name="teamsize" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>My Size team is*</label>
 		</div>
 		<div class="textfield textfield--float-label">
-			<textarea onkeyup="this.setAttribute('value', this.value);"></textarea>
+			<input type="text" name="subject" onkeyup="this.setAttribute('value', this.value);"></input>
+			<label>Subject</label>
+		</div>
+		<div class="textfield textfield--float-label">
+			<textarea name="detail" onkeyup="this.setAttribute('value', this.value);"></textarea>
 			<label>Now let's us know what you need?*</label>
 		</div>
-		<button class="btn btn--purple contact-us__form__btn">Submit</button>
+		<button name="submit" class="btn btn--purple contact-us__form__btn">Submit</button>
 	</form>
 </div>
