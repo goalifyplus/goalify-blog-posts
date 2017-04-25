@@ -1,4 +1,3 @@
-
 <header class="header">
 	<div class="container-fluid container-fluid--fixed header__container">
 		<a href="/"><img src="/images/logo.svg" alt="Goalify Logo" class="header__container__logo"/></a>
@@ -10,8 +9,5 @@
 			<a href="/login" class="nav__item nav__item--login">login</a>
 			<a href="/how-we-work" class="nav__item nav__item--btn btn">how we work</a>
 		</nav>
-		<h1 class="header__container__title">Reinventing the way your team focusing into achieving their goal, create better working environement.</h1>
-		<p class="header__container__desc">SEN give leaders tools to increase employee retention, leverage up productivity, improve company culture and inspire employee personal branding.</p>
-		<img src="/images/macbook-air-perdoo.png" alt="Goalify image header" class="header__container__image"/>
 	</div>
 </header>

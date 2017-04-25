@@ -26,6 +26,42 @@
 	}
 }
 
+.hero-banner {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	padding-top: 14rem;
+	padding-bottom: 10rem;
+	overflow: hidden;
+
+	&__content {
+		position: relative;
+	}
+
+	&__title {
+		font-size: 48px;
+		font-weight: 300;
+		color: $white;
+		line-height: 1.41;
+		max-width: 56%;
+	}
+
+	&__desc {
+		color: $white;
+		max-width: 51rem;
+		margin-top: 25px;
+		font-size: 18px;
+		line-height: 1.56;
+		font-weight: 300;
+	}
+
+	&__image {
+		position: absolute;
+		right: -18rem;
+		top: 0;
+		width: 59%;
+		max-width: 70rem;
+	}
+}
+
 .home-section {
 	margin-bottom: 18rem;
 	padding-left: 3rem;

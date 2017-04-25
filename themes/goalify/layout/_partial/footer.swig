@@ -8,9 +8,9 @@
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">SEN</div>
 				<ul class="footer-container__info-section__nav">
-					<li>Home</li>
+					<li><a href="/home">Home</a></li>
 					<li>Features</li>
-					<li>Pricing</li>
+					<li><a href="/pricing">Pricing</a></li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
@@ -32,7 +32,7 @@
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">resource</div>
 				<ul class="footer-container__info-section__nav">
-					<li>Blog</li>
+					<li><a href="/blog">Blog</a></li>
 					<li>Webinar</li>
 					<li>ROI Calculation</li>
 				</ul>

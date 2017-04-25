@@ -2,6 +2,13 @@
 
 {% block main %}
 	<div class="home">
+		<section class="hero-banner">
+			<div class="container-fluid container-fluid--fixed hero-banner__content">
+				<h1 class="hero-banner__title">Reinventing the way your team focusing into achieving their goal, create better working environement.</h1>
+				<p class="hero-banner__desc">SEN give leaders tools to increase employee retention, leverage up productivity, improve company culture and inspire employee personal branding.</p>
+				<img src="/images/macbook-air-perdoo.png" alt="Goalify image header" class="hero-banner__image"/>
+			</div>
+		</section>
 		<div class="register home__register">
 			<h3 class="register__title">Get started for FREE</h3>
 			<!--<span class="register__sub-title">Invite more team member and starting a team is really that simple.</span>-->
@@ -122,14 +129,16 @@
 			<div class="home__revenue__background"></div>
 		</section>
 
-		<section class="home__register-bottom container-fluid container-fluid--fixed">
-			<div class="home__register-bottom__title">
-				<span class="highlight">Ready to get started for free</span>
-				<span>or create an account</span>
-			</div>
-			<div class="home__register-bottom__group-btn">
-				<button class="btn btn--purple">Get started for FREE</button>
-				<button class="btn btn--transparent ">Sign up</button>
+		<section class="home__register-bottom">
+			<div class="register-form-horizontal container-fluid container-fluid--fixed">
+				<div class="register-form-horizontal__title">
+					<span class="common highlight">Ready to get started for free</span>
+					<span>or create an account</span>
+				</div>
+				<div class="register-form-horizontal__group-btn">
+					<button class="btn btn--purple">Get started for FREE</button>
+					<button class="btn btn--transparent ">Sign up</button>
+				</div>
 			</div>
 		</section>
 	</div>
