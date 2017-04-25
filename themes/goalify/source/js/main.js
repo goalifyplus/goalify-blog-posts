@@ -18,6 +18,7 @@ var goalify = goalify || {};
 		{ min: 101, max: 500, cost: 7500 },
 		{ min: 501, max: 2000, cost: 15000 }
 	];
+	var teamsizes = ['1-10', '11-50', '51-100', '101-200', '>200'];
 	var goalifyContactUrl = 'https://script.google.com/macros/s/AKfycbz5oEQoNpz7Coinl_pLkcv0sQKqDd0XqHBsf_pFoZFYqjXej2s/exec';
 
 	var howWeWork = document.querySelector('.how-we-work');
@@ -175,6 +176,9 @@ var goalify = goalify || {};
 					for (var index = 0; index < elements.length - 1; index++) {
 						var element = elements[index];
 						param[element.name] = element.value;
+						if (element.name === 'teamsize') {
+							param.teamsize = teamsizes[element.value];
+						}
 					}
 				}
 
