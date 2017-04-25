@@ -8,13 +8,22 @@ var goalify = goalify || {};
 (function() {
 	'use strict';
 
-	var keyCodes = [8, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+	var keyCodes = [8, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 190];
+	var annualCost = [
+		{ min: 1, max: 10, cost: 100 },
+		{ min: 11, max: 15, cost: 750 },
+		{ min: 16, max: 25, cost: 1500 },
+		{ min: 26, max: 50, cost: 3000 },
+		{ min: 51, max: 100, cost: 4500 },
+		{ min: 101, max: 500, cost: 7500 },
+		{ min: 501, max: 2000, cost: 15000 }
+	];
 	var goalifyContactUrl = 'https://script.google.com/macros/s/AKfycbz5oEQoNpz7Coinl_pLkcv0sQKqDd0XqHBsf_pFoZFYqjXej2s/exec';
 
 	var howWeWork = document.querySelector('.how-we-work');
 	var contactUs = document.querySelector('.contact-us');
 
-	// utils
+	// ---------------------------- Utils -------------------------------
 	var numberWithCommas = function(x) {
 		var parts = x.toString().split('.');
 		parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -50,23 +59,77 @@ var goalify = goalify || {};
 		request.send();
 	};
 
+	var calculateROI = function(numberOfEmployee, salary, turnoverPercent) {
+		// convert to number if not string
+		var n = Number(numberOfEmployee);
+		var s = Number(salary);
+		var p = Number(turnoverPercent);
+
+		// hiring cost
+		var hiring = (s / 12) * 2;
+		var onBoarding = (s / 12) * 0.75;
+		var development = (s / 12) * 2 * 0.5;
+		var unfulliedTime = (s / 12) * 2 * 0.25;
+		var percent = p / 100;
+
+		var turnoverCost = (hiring + onBoarding + development + unfulliedTime) * percent * n;
+		return {
+			turnoverCost,
+			rehireCost: hiring * percent * n,
+		};
+	};
+
+	var currencyText = function(symbol, currency, value) {
+		return symbol + ' ' + numberWithCommas(value) + ' ' + currency;
+	};
+
+	//------------------------- Main scripts ------------------------
 	if (howWeWork) {
 		var expectationReduceForm = document.getElementById('roi-form');
+		var savingCost = document.getElementById('savingCost');
+		var currentCostToRehire = document.getElementById('currentCostToRehire');
+		var costGoingWithUs = document.getElementById('costGoingWithUs');
+		var employeeYouSave = document.getElementById('employeeYouSave');
+		var costRehireWithUs = document.getElementById('costRehireWithUs');
+
+		var calculateSaving = function(form) {
+			// Get value from inputs
+			var employeeNumber = form.elements.numberOfEmployee.value || 0;
+			var salary = form.elements.salary.value.replace(/,/g, '') || 0;
+			var turnoverPercent = form.elements.turnoverPercent.value || 0;
+			var expectPercent = form.elements.reducePercent.value || 0;
+
+			// calculate roi
+			var actualTurnoverCost = calculateROI(employeeNumber, salary, turnoverPercent);
+			var expectTurnoverCost = calculateROI(employeeNumber, salary, expectPercent);
+
+			var saving = actualTurnoverCost.turnoverCost - expectTurnoverCost.turnoverCost;
+			var symbol = '$';
+			var currency = 'USD';
+
+			// set element text after calculate
+			savingCost.innerText = currencyText(symbol, currency, saving);
+			currentCostToRehire.innerText = currencyText(symbol, currency, actualTurnoverCost.rehireCost);
+			employeeYouSave.innerText = Math.ceil(employeeNumber * (turnoverPercent - expectPercent) / 100);
+			costRehireWithUs.innerText = currencyText(symbol, currency, expectTurnoverCost.rehireCost);
+
+			// get annual cost using us
+			var temp = 0;
+			for (var index = 0; index < annualCost.length; index++) {
+				if (annualCost[index].min <= employeeNumber && annualCost[index].max >= employeeNumber) {
+					temp = index;
+					break;
+				}
+			}
+			costGoingWithUs.innerText = currencyText(symbol, currency, annualCost[temp].cost);
+		};
+
 		if (expectationReduceForm) {
 			var inputs = expectationReduceForm.querySelectorAll('.roi-form__input');
 			[].forEach.call(inputs, function(input) {
 				// prevent keycode not number
 				input.addEventListener('keydown', function(e) {
 					var event = e || window.event;
-					if (input.name === 'salary') {
-						keyCodes.push(190);
-					}
-					if (input.name === 'turnoverPercent') {
-						if (e.target.value.length >= 3 && event.keyCode !== 8) {
-							e.preventDefault();
-							return false;
-						}
-					}
 					if (keyCodes.indexOf(event.keyCode) === -1) {
 						e.preventDefault();
 						return false;
@@ -76,12 +139,12 @@ var goalify = goalify || {};
 
 				// set value attribute to keep label floating, add comma if salary input
 				input.addEventListener('keyup', function(e) {
-					if (input.name === 'salary') {
-						var salaryInput = e.target;
-						var convertedNumber = numberWithCommas(salaryInput.value.replace(/,/g, ''));
-						salaryInput.value = convertedNumber;
+					var i = e.target;
+					if (i.name === 'salary') {
+						var convertedNumber = numberWithCommas(i.value.replace(/,/g, ''));
+						i.value = convertedNumber;
 					}
-					input.setAttribute('value', e.target.value);
+					i.setAttribute('value', i.value);
 				});
 			});
 
@@ -89,12 +152,13 @@ var goalify = goalify || {};
 			expectationReduceForm.addEventListener('input', function(e) {
 				var form = e.target.form;
 				var input = e.target;
-				if (input.name === 'reduce-percent') {
+				if (input.name === 'reducePercent') {
 					var result = form.elements.result;
 					var resultContainer = result.parentElement;
 					result.value = input.value + ' %';
 					resultContainer.style.marginLeft = input.value + '%';
 				}
+				calculateSaving(form);
 			});
 		}
 	}
