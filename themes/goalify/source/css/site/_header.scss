@@ -26,10 +26,6 @@
 				color: $white;
 			}
 		}
-
-		.btn {
-			font-size: 1.6rem;
-		}
 	}
 }
 
@@ -42,6 +38,7 @@
 		text-decoration: none;
 		color: $white;
 		padding: 15px 25px;
+		font-size: 1.4rem;
 
 		&--login {
 			padding-left: 5rem;
@@ -54,7 +51,7 @@
 				height: 2rem;
 				background: #9290D6;
 				position: absolute;
-				left: 3rem;
+				left: 1.5rem;
 			}
 		}
 

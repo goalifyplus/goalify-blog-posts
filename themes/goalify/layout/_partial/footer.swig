@@ -6,7 +6,7 @@
 		</div>
 		<div class="footer-container__info">
 			<div class="footer-container__info-section">
-				<div class="footer-container__info-section__title">SEN</div>
+				<div class="footer-container__info-section__title">Goalify</div>
 				<ul class="footer-container__info-section__nav">
 					<li><a href="/home">Home</a></li>
 					<li>Features</li>
@@ -47,7 +47,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="footer-container__copyright">&copy; SEN 2017</div>
+		<div class="footer-container__copyright">&copy; Goalify 2017</div>
 	</div>
 
 </footer><!-- /.footer-->
