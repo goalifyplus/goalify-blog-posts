@@ -18,7 +18,7 @@
 				<ul class="footer-container__info-section__nav">
 					<li>Get started</li>
 					<li>How it work</li>
-					<li>Support</li>
+					<li><a href="/contact-us">Support</a></li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
