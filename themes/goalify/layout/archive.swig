@@ -1,6 +1,15 @@
-{# Note: this is the template for Blog page #}
-
 {% extends 'base.swig' %}
+{% block hero-banner %}
+	{{ partial('_partial/hero-banner', {
+		page: {
+			isHeroBannerHeader: true,
+			backgroundHeader: '/images/job-header-banner.jpg',
+			titleHeader: 'Let’s together build the great environment',
+			descHeaderFirst: 'Sharing is caring.',
+			descHeaderSecond: 'We happy to share all about the resources that help to build better work place. We also share our ideas, guide, and view from team and growing up the culture, engagment.'
+		}
+	}) }}
+{% endblock %}
 
 {% block main %}
 	<main class="blog">
