@@ -23,6 +23,7 @@ var goalify = goalify || {};
 
 	var howWeWork = document.querySelector('.how-we-work');
 	var contactUs = document.querySelector('.contact-us');
+	var blogDetail = document.querySelector('.blog-detail');
 
 	// ---------------------------- Utils -------------------------------
 	var numberWithCommas = function(x) {
@@ -195,5 +196,23 @@ var goalify = goalify || {};
 				});
 			});
 		}
+	}
+
+	if (blogDetail) {
+		var popup = document.querySelector('.popup');
+		var popupCloseBtn = document.querySelector('.js-close-popup');
+		var popupOpenBtn = document.querySelector('.js-open-popup');
+
+		popupCloseBtn.addEventListener('click', function() {
+			popup.style.opacity = 0;
+			popup.style.zIndex = -1;
+			document.body.style.overflow = 'auto';
+		});
+
+		popupOpenBtn.addEventListener('click', function() {
+			popup.style.opacity = 1;
+			popup.style.zIndex = 1;
+			document.body.style.overflow = 'hidden';
+		});
 	}
 }());
