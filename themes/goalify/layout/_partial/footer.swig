@@ -8,42 +8,42 @@
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">Goalify</div>
 				<ul class="footer-container__info-section__nav">
-					<li><a href="/home">Home</a></li>
-					<li>Features</li>
-					<li><a href="/pricing">Pricing</a></li>
+					<li class="footer-container__nav-item"><a href="/">Home</a></li>
+					<li class="footer-container__nav-item">Features</li>
+					<li class="footer-container__nav-item"><a href="/pricing">Pricing</a></li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">guild</div>
 				<ul class="footer-container__info-section__nav">
-					<li>Get started</li>
-					<li>How it work</li>
-					<li><a href="/contact-us">Support</a></li>
+					<li class="footer-container__nav-item">Get started</li>
+					<li class="footer-container__nav-item">How it work</li>
+					<li class="footer-container__nav-item"><a href="/contact-us">Support</a></li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">company</div>
 				<ul class="footer-container__info-section__nav">
-					<li>About</li>
-					<li>Jobs</li>
-					<li>Press</li>
+					<li class="footer-container__nav-item"><a href="/about">About</a></li>
+					<li class="footer-container__nav-item">Jobs</li>
+					<li class="footer-container__nav-item">Press</li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">resource</div>
 				<ul class="footer-container__info-section__nav">
-					<li><a href="/blog">Blog</a></li>
-					<li>Webinar</li>
-					<li>ROI Calculation</li>
+					<li class="footer-container__nav-item"><a href="/blog">Blog</a></li>
+					<li class="footer-container__nav-item">Webinar</li>
+					<li class="footer-container__nav-item"><a href="/roi-calculation">ROI Calculation</a></li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
 				<div class="footer-container__info-section__title">contact</div>
 				<ul class="footer-container__info-section__nav">
-					<li>Email</li>
-					<li>Facebook</li>
-					<li>Linkedin</li>
-					<li>Twitter</li>
+					<li class="footer-container__nav-item">Email</li>
+					<li class="footer-container__nav-item">Facebook</li>
+					<li class="footer-container__nav-item">Linkedin</li>
+					<li class="footer-container__nav-item">Twitter</li>
 				</ul>
 			</div>
 		</div>

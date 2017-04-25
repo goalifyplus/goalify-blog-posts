@@ -16,7 +16,7 @@
 			<a href="/about" class="nav__item">about</a>
 			<a href="/resources" class="nav__item">resources</a>
 			<a href="/login" class="nav__item nav__item--login">login</a>
-			<a href="/how-we-work" class="nav__item nav__item--btn btn">Calculate ROI</a>
+			<a href="/roi-calculation" class="nav__item nav__item--btn btn">Calculate ROI</a>
 		</nav>
 	</div>
 </header>
