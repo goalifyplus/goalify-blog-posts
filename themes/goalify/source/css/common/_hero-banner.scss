@@ -1,0 +1,31 @@
+.header-hero-banner {
+	height: 48rem;
+	display: block;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: $white;
+
+	&__title {
+		font-size: $main-title;
+		font-weight: 500;
+		margin: 0;
+		padding-top: 18rem;
+	}
+
+	&__content {
+		padding-top: 1.5rem;
+	}
+
+	&__desc {
+		font-size: 1.8rem;
+		font-weight: lighter;
+		padding-top: 0.5rem;
+		display: block;
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+}
