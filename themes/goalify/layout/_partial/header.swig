@@ -9,6 +9,7 @@
 		{% else %}
 			<a href="/"><img src="/images/logo.svg" alt="Goalify Logo" class="header__container__logo"/></a>
 		{% endif %}
+
 		<nav class="nav">
 			<a href="/products" class="nav__item">products</a>
 			<a href="/pricing" class="nav__item">pricing</a>
