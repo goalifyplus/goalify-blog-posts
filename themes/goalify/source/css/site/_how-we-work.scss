@@ -1,7 +1,6 @@
 .how-we-work {
-
 	&__header {
-
+		padding-top: 17rem;
 	}
 
 	&__intro {
@@ -44,7 +43,7 @@
 				overflow: hidden;
 				position: relative;
 
-				&:before {
+				&::before {
 					content: '';
 					width: 0;
 					height: 0;
@@ -74,31 +73,45 @@
 
 				&__title {
 					display: block;
+					margin-bottom: 3rem;
 				}
 
 				&__range {
 					display: flex;
 					justify-content: space-between;
 					margin-top: 1rem;
+					padding-left: 0.5rem;
+				}
+
+				&__result-wrapper {
+					width: 100%;
+					padding-right: 2.8rem;
+				}
+
+				&__result-container {
+					position: relative;
+					display: inline-block;
+					width: 2.8rem;
+					height: 2.8rem;
 				}
 
 				&__result {
-					// position: absolute;
-					// top: 0.5rem;
-					// left: 50%;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
 					display: inline-block;
-					// transform: translateX(50%);
+					white-space: nowrap;
 				}
 
 				&__input {
 					width: 100%;
-					margin-top: 5rem;
 					-webkit-appearance: none;
 					outline: none;
 					border-bottom: none;
 					height: 1px;
 					background-color: rgba(0, 0, 0, 0.26);
 					cursor: pointer;
+					margin-bottom: 2rem;
 				}
 
 				&__input::-webkit-slider-thumb {
@@ -165,7 +178,6 @@
 	}
 
 	.register-form-horizontal {
-
 		&__title {
 			color: $white;
 		}
@@ -174,6 +186,7 @@
 			.btn--first {
 				background-color: $register-btn;
 			}
+
 			.btn--second {
 				background-color: $white;
 				color: $dark-blue;

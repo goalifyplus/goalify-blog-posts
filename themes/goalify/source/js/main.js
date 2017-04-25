@@ -8,9 +8,18 @@ var goalify = goalify || {};
 (function() {
 	'use strict';
 
-	/* eslint no-unused-vars:0 */
-	var heroBanner = goalify.HeroBanner;
-	var navBarToggle = goalify.NavBarToggleWithBackground;
-	var getInTouch = goalify.GetInTouchAnimation;
-
+	const howWeWork = document.querySelector('.how-we-work');
+	if (howWeWork) {
+		const expectationReduceForm = document.getElementById('expectation-reduce');
+		if (expectationReduceForm) {
+			expectationReduceForm.addEventListener('input', function(e) {
+				var form = e.target.form;
+				var input = e.target;
+				var result = form.elements.result;
+				var resultContainer = result.parentElement;
+				result.value = input.value + ' %';
+				resultContainer.style.marginLeft = input.value + '%';
+			});
+		}
+	}
 }());
