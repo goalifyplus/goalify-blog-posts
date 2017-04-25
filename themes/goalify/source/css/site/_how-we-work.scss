@@ -3,6 +3,10 @@
 		padding-top: 17rem;
 	}
 
+	&__form {
+		padding-top: 3rem;
+	}
+
 	&__intro {
 		text-align: center;
 
@@ -22,6 +26,7 @@
 
 	&__calculate-saving {
 		margin-top: 6rem;
+		margin-bottom: 4rem;
 
 		&__photo {
 			max-width: 48.4rem;

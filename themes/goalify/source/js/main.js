@@ -99,14 +99,18 @@ var goalify = goalify || {};
 			var salary = form.elements.salary.value.replace(/,/g, '') || 0;
 			var turnoverPercent = form.elements.turnoverPercent.value || 0;
 			var expectPercent = form.elements.reducePercent.value || 0;
+			var currency = form.elements.currency.value || 'usd';
 
 			// calculate roi
 			var actualTurnoverCost = calculateROI(employeeNumber, salary, turnoverPercent);
 			var expectTurnoverCost = calculateROI(employeeNumber, salary, expectPercent);
 
 			var saving = actualTurnoverCost.turnoverCost - expectTurnoverCost.turnoverCost;
-			var symbol = '$';
-			var currency = 'USD';
+			var symbol = '';
+			if (currency === 'usd') {
+				symbol = '$';
+			}
+			currency = currency.toUpperCase();
 
 			// set element text after calculate
 			savingCost.innerText = currencyText(symbol, currency, saving);
