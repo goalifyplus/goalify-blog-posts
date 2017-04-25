@@ -5,7 +5,7 @@
 		<section class="hero-banner">
 			<div class="container-fluid container-fluid--fixed hero-banner__content">
 				<h1 class="hero-banner__title">Reinventing the way your team focusing into achieving their goal, create better working environement.</h1>
-				<p class="hero-banner__desc">SEN give leaders tools to increase employee retention, leverage up productivity, improve company culture and inspire employee personal branding.</p>
+				<p class="hero-banner__desc">Goalify give leaders tools to increase employee retention, leverage up productivity, improve company culture and inspire employee personal branding.</p>
 				<img src="/images/macbook-air-perdoo.png" alt="Goalify image header" class="hero-banner__image"/>
 			</div>
 		</section>

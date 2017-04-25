@@ -48,4 +48,16 @@
 		font-size: 14px;
 		color: $dark-grey;
 	}
+
+	&__nav-item {
+		a {
+			text-decoration: none;
+			color: $dark-grey;
+
+			&:hover, &:focus {
+				text-decoration: none;
+				color: $dark-grey;
+			}
+		}
+	}
 }

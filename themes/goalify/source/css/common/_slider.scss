@@ -1,5 +1,4 @@
 .slider-wrapper {
-	width: calc(100% - 8rem);
 	margin-top: 2rem;
 
 	&__title {
@@ -75,13 +74,20 @@
 		cursor: pointer;
 	}
 
-	&__steps {
-		display: flex;
-		justify-content: space-between;
+	&__step-wrapper {
+		position: relative;
+		width: 3rem;
+		height: 3rem;
 
-		&__item {
-			width: calc(20% - 1.4rem);
-			text-align: center;
+		&:first-child {
+			width: 2.4rem;
 		}
+	}
+
+	&__step {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
 	}
 }
