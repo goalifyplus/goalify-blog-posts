@@ -37,7 +37,11 @@
 					<div class="how-we-work__calculate-saving__form">
 						<div class="slider-wrapper">
 							<label class="slider-wrapper__title">Expectation reduce to</label>
-							<form oninput="result.value=parseInt(input.value) + '%'">
+							<div class="slider-wrapper__range">
+								<span>0</span>
+								<span>100</span>
+							</div>
+							<form id="expectation-reduce">
 								<div>
 									<input class="slider-wrapper__input"
 										name="input"
@@ -46,16 +50,13 @@
 										min="0"
 										max="100"
 									>
-									<output name="result" class="slider-wrapper__result">0%</output>
-								</div>
-								<div name="test">
-									<span></span>
+									<div class="slider-wrapper__result-wrapper">
+										<span class="slider-wrapper__result-container">
+											<output name="result" class="slider-wrapper__result">0%</output>
+										</span>
+									</div>
 								</div>
 							</form>
-							<div class="slider-wrapper__range">
-								<span>0</span>
-								<span>100</span>
-							</div>
 						</div>
 					</div>
 				</div>
