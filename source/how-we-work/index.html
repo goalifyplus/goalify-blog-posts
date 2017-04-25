@@ -9,16 +9,16 @@
 				<div class="col-xs-12 col-sm-6">
 					<img src="/images/laptop.png" alt="" class="how-we-work__calculate-saving__photo">
 				</div>
-				<div class="col-xs-12 col-sm-6">
+				<form id="roi-form" class="col-xs-12 col-sm-6">
 					<div class="how-we-work__calculate-saving__form">
 						<div class="textfield textfield--float-label">
-							<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+							<input type="text" name="numberOfEmployee" value="" class="roi-form__input">
 							<label>Number of employee*</label>
 						</div>
 					</div>
 					<div class="how-we-work__calculate-saving__form">
 						<div class="textfield textfield--float-label">
-							<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+							<input type="text" name="salary" value="" class="roi-form__input">
 							<label>Average yearly salary of employee*</label>
 						</div>
 						<div class="select-members">
@@ -30,7 +30,7 @@
 					</div>
 					<div class="how-we-work__calculate-saving__form">
 						<div class="textfield textfield--float-label">
-							<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+							<input type="text" name="turnoverPercent" class="roi-form__input">
 							<label>Average yearly turnover percentage*</label>
 						</div>
 					</div>
@@ -41,25 +41,21 @@
 								<span>0</span>
 								<span>100</span>
 							</div>
-							<form id="expectation-reduce">
-								<div>
-									<input class="slider-wrapper__input"
-										name="input"
-										type="range"
-										value="0"
-										min="0"
-										max="100"
-									>
-									<div class="slider-wrapper__result-wrapper">
-										<span class="slider-wrapper__result-container">
-											<output name="result" class="slider-wrapper__result">0%</output>
-										</span>
-									</div>
-								</div>
-							</form>
+							<input class="slider-wrapper__input"
+								name="reduce-percent"
+								type="range"
+								value="0"
+								min="0"
+								max="100"
+							>
+							<div class="slider-wrapper__result-wrapper">
+								<span class="slider-wrapper__result-container">
+									<output name="result" class="slider-wrapper__result">0%</output>
+								</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
