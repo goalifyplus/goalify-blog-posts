@@ -48,6 +48,9 @@
 
 {% endblock %}
 
+{% block hero-banner %}
+{% endblock %}
+
 {% block main %}
 
 {{ page.content }} {# extends with main content here #}
