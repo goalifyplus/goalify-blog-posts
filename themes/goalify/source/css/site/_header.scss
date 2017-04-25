@@ -16,6 +16,23 @@
 	}
 }
 
+.header--transparent {
+	.nav {
+		&__item {
+			color: $black;
+
+			&--btn {
+				background-color: $purple-2;
+				color: $white;
+			}
+		}
+
+		.btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
 .nav {
 	display: flex;
 	justify-content: flex-end;
