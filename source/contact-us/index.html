@@ -19,9 +19,35 @@ isTransparentHeader: true
 			<input type="text" name="company" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Company name*</label>
 		</div>
-		<div class="textfield textfield--float-label">
-			<input type="text" name="teamsize" value="" onkeyup="this.setAttribute('value', this.value);">
-			<label>My Size team is*</label>
+		<div class="textfield">
+			<div class="slider-wrapper">
+				<label class="slider-wrapper__title">My company size is</label>
+				<input class="slider-wrapper__input"
+					name="size"
+					type="range"
+					value="0"
+					min="0"
+					max="100"
+					step="25"
+				>
+				<div class="slider-wrapper__range">
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">0</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">10-20</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">50-100</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">100-200</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">>200</span>
+					</span>
+				</div>
+			</div>
 		</div>
 		<div class="textfield textfield--float-label">
 			<input type="text" name="subject" onkeyup="this.setAttribute('value', this.value);"></input>
