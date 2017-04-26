@@ -1,8 +1,12 @@
+title: Pricing
+href: gref-test
+description: description test
 name: pricing
 isTransparentHeader: true
 ---
 <div class="pricing">
 	<div class="pricing__header">
+		<h1>{{page.layout}}</h1>
 		<h2 class="pricing__header__title">Pricing and Plans</h2>
 		<p class="pricing__header__desc">We support start-ups. Pay as you grow.</p>
 	</div>
@@ -36,14 +40,14 @@ isTransparentHeader: true
 				<div class="pricing__package pricing__package--professional">
 					<div class="pricing__package__header">
 						<h6 class="title title--professional">Professtional</h6>
-						<div class="period">
-							<input type="radio" checked name="period" class="period__input" id="period-yearly"></input>
+						<form class="period">
+							<input type="radio" checked name="period" class="period__input js-select-price-yearly" id="period-yearly"></input>
 							<label for="period-yearly" class="period__label period__label--left">Yearly
 							</label>
-							<input type="radio" name="period" class="period__input" id="period-monthly">
+							<input type="radio" name="period" class="period__input js-select-price-monthly" id="period-monthly">
 							<label for="period-monthly" class="period__label">Monthly
 							</label>
-						</div>
+						</form>
 						<div class="price">
 							<span class="currency">$</span>
 							<span class="amount js-price-result">100</span>

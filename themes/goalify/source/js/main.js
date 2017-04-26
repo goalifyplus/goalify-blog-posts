@@ -201,6 +201,26 @@ var goalify = goalify || {};
 	if (pricing) {
 		var priceSelection = document.querySelector('.js-price-selection');
 		var priceResult = document.querySelector('.js-price-result');
+		var selectPriceYearly = document.querySelector('.js-select-price-yearly');
+		var selectPriceMonthly = document.querySelector('.js-select-price-monthly');
+		var priceByMembers = priceSelection.children;
+		var priceByYearly = [100, 750, 1500, 3000, 4500, 7500, 15000];
+		var priceByMonthly = [8, 75, 150, 300, 450, 750, 1500];
+
+		selectPriceYearly.addEventListener('click', function() {
+			priceByYearly.forEach(function(item, index) {
+				priceByMembers[index].value = item;
+			});
+			priceResult.innerHTML = priceSelection.value;
+		});
+
+		selectPriceMonthly.addEventListener('click', function() {
+			priceByMonthly.forEach(function(item, index) {
+				priceByMembers[index].value = item;
+			});
+			priceResult.innerHTML = priceSelection.value;
+		});
+
 		priceSelection.addEventListener('change', function() {
 			console.log('test: ', priceSelection.value);
 			priceResult.innerHTML = priceSelection.value;
