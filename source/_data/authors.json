@@ -1,0 +1,66 @@
+[
+	{
+		"name": "Thanh Tran",
+		"avatar": "/images/authors/thanh-tran.jpg",
+		"intro": "Co-founder & CTO",
+		"url": {
+			"twitter": "https://twitter.com/trongthanh",
+			"gplus": "https://plus.google.com/+TrọngThanhTrần",
+			"github": "https://github.com/trongthanh",
+			"linkedin": "https://www.linkedin.com/in/trongthanh",
+			"blog": "http://blog.int3ractive.com"
+		}
+	},
+	{
+		"name": "Quy Tran",
+		"avatar": "/images/authors/quy-tran.jpg",
+		"intro": "Front End Technical Lead",
+		"url": {
+			"twitter": "https://twitter.com/tuanquynet",
+			"gplus": "https://plus.google.com/112492032819473752694",
+			"github": "https://github.com/tuanquynet",
+			"blog": "http://blog.pingbon.info"
+		}
+	},
+	{
+		"name": "Vy Hoang",
+		"avatar": "/images/authors/vy-hoang.jpg",
+		"intro": "Assistant Office Manager",
+		"url": {
+
+		}
+	},
+	{
+		"name": "Thuy Vo",
+		"avatar": "/images/authors/thuy-vo.jpg",
+		"intro": "Assistant Office Manager",
+		"url": {
+
+		}
+	},
+	{
+		"name": "Trang Nguyen",
+		"avatar": "/images/authors/trang-nguyen.jpg",
+		"intro": "Digital Marketer",
+		"url": {
+
+		}
+	},
+	{
+		"name": "Bui Tran Phi Long",
+		"avatar": "/images/authors/bui-tran-phi-long.jpg",
+		"intro": "Co-founder, CEO Nau Digital Creative",
+		"url": {
+
+		}
+	},
+	{
+		"name": "Eric Tran",
+		"avatar": "/images/authors/tung-tran.jpg",
+		"intro": "Front-end Developer",
+		"url": {
+		}
+	}
+]
+
+

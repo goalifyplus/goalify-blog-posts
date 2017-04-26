@@ -2,7 +2,6 @@
 title: Marvel Studio sắp bị phá sản
 thumbnail: images/avatar-post.jpeg
 authorName: Eric Tran
-authorAvatar: images/author.jpg
 date: 2017-04-24T18:46:28+07:00
 tags:
   - Guideline

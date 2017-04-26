@@ -2,7 +2,6 @@
 title: Xiaomi 6
 thumbnail: images/food-dinner.jpg
 authorName: Eric Tran
-authorAvatar: images/author.jpg
 date: 2017-04-19T18:46:28+07:00
 tags:
   - Guideline

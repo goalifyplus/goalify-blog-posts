@@ -2,7 +2,6 @@
 title: Apple tuyển lập trình viên phát triển công cụ dựng phim 3D VR
 thumbnail: images/avatar-post.jpeg
 authorName: Eric Tran
-authorAvatar: images/author.jpg
 date: 2017-04-19T18:46:28+07:00
 tags:
   - Guideline

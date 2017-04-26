@@ -46,8 +46,8 @@
 										{{ truncate(strip_html(item.content), {length: 180}) }}
 									</p>
 									<div class="blog__post__info">
-										<span class="blog__post__author-avatar" style="background-image: url({{ url_for(item.authorAvatar) }})"></span>
-										<span class="blog__post__author-name">{{item.authorName}}</span>
+										<span class="blog__post__author-avatar" style="background-image: url({{ url_for(item.author.avatar) }})"></span>
+										<span class="blog__post__author-name">{{item.author.name}}</span>
 										<time class="blog__post__time" datetime="{{ item.date.toDate().toISOString() }}">{{ item.date.format(config.date_format) }}</time>
 									</div>
 								</div>
