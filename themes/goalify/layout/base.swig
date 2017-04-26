@@ -8,14 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- for Google -->
-	<meta name="description" content="{{page.excerpt}}" />
+	<meta name="description" content="{{page.description}}" />
 	<meta name="keywords" content="" />
 	<!-- for Facebook -->
 	<meta property="og:title" content="{{page.title}}" />
-	<meta property="og:type" content="article" />
-	<meta property="og:image" content="{{page.href}}/cover.jpg" />
-	<meta property="og:url" content="{{page.href}}" />
-	<meta property="og:description" content="{{page.excerpt}}" />
+	<meta property="og:type" content="{{page.layout}}" />
+	<meta property="og:image" content="{{config.url + page.imageUrl}}" />
+	<meta property="og:url" content="{{config.url + page.url}}" />
+	<meta property="og:description" content="{{page.description}}" />
 
 	<!-- for Twitter -->
 	<meta name="twitter:card" content="summary" />
