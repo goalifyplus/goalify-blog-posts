@@ -61,7 +61,9 @@
 					<section class="blog__posts">
 						{% for item in page.posts %}
 							<div class="blog__post">
-								<div class="blog__post__thumbnail" style="background-image: url({{ url_for(item.thumbnail) }})"></div>
+								<a href="{{ url_for(item.path) }}">
+									<div class="blog__post__thumbnail" style="background-image: url({{ url_for(item.thumbnail) }})"></div>
+								</a>
 								<div class="blog__post__content">
 									<h4 class="blog__post__title"><a href="{{ url_for(item.path) }}" class="blog__post__link">{{item.title}}</a></h4>
 									<p class="blog__post__intro">

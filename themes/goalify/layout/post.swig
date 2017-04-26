@@ -38,8 +38,8 @@
 						<header class="blog-detail__header">
 							<h1 class="blog-detail__header__title">{{ page.title }}</h1>
 							<div class="blog-detail__header__info">
-								<span class="blog-detail__header__author-avatar" style="background-image: url({{ url_for(page.authorAvatar) }})"></span>
-								<span class="blog-detail__header__author-name">{{ page.authorName }}</span>
+								<span class="blog-detail__header__author-avatar" style="background-image: url({{ url_for(page.author.avatar) }})"></span>
+								<span class="blog-detail__header__author-name">{{ page.author.name }}</span>
 								<time class="blog-detail__header__time" datetime="{{ page.date.toDate().toISOString() }}">{{ page.date.format(config.date_format) }}</time>
 							</div>
 						</header>
@@ -62,16 +62,8 @@
 			</div>
 		</section>
 		<section class="blog-detail__suggestion">
-			<div class="blog-detail__suggestion__item" style="background-image: url({{ url_for(page.thumbnail) }})">
-				<button class="btn btn--transparent blog-detail__suggestion__btn float lighter">Read this next</button>
-				<h4 class="blog-detail__suggestion__title float">The Purpose of Education</h4>
-				<p class="blog-detail__suggestion__desc float lighter">I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our</p>
-			</div>{#
-			#}<div class="blog-detail__suggestion__item" style="background-image: url(/images/food-dinner.jpg)">
-				<button class="btn btn--transparent blog-detail__suggestion__btn float lighter">You might enjoy</button>
-				<h4 class="blog-detail__suggestion__title float">The Purpose of Education</h4>
-				<p class="blog-detail__suggestion__desc float lighter">I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our</p>
-			</div>
+			{{ relatedPost(page, true) }}
+			{{ relatedPost(page, false) }}
 		</section>
 		<div class="popup">
 			<h4 class="popup__title">Thank you for your subcription!</h4>
