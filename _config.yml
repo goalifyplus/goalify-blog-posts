@@ -69,3 +69,8 @@ theme: goalify
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Facebook app id
+## set facebook app id for SEO
+fb_app_id: ''
+
