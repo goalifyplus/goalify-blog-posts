@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://goalify.plus
+url: https://goalify.plus
 root: /
 permalink: blog/:year/:month/:day/:title/
 permalink_defaults:
@@ -69,3 +69,8 @@ theme: goalify
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Facebook app id
+## set facebook app id for SEO
+fb_app_id: ''
+

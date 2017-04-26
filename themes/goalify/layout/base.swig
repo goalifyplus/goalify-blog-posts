@@ -16,6 +16,7 @@
 	<meta property="og:image" content="{{page.href}}/cover.jpg" />
 	<meta property="og:url" content="{{page.href}}" />
 	<meta property="og:description" content="{{page.excerpt}}" />
+	<meta property="fb:app_id" content="{{config.fb_app_id}}" />
 
 	<!-- for Twitter -->
 	<meta name="twitter:card" content="summary" />
