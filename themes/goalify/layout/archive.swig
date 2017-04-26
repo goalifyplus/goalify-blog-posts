@@ -1,4 +1,26 @@
 {% extends 'base.swig' %}
+{% block meta %}
+	<title>Goalify Blog</title>
+	<meta name="description" content="Sharing is caring.We happy to share all about the resources that help to build better work place. We also share our ideas, guide, and viewpoints from team and build up the culture, engagement.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- for Google -->
+	<meta name="description" content="Sharing is caring.We happy to share all about the resources that help to build better work place. We also share our ideas, guide, and viewpoints from team and build up the culture, engagement." />
+	<meta name="keywords" content="" />
+	<!-- for Facebook -->
+	<meta property="og:title" content="Goalify Blog" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="{{config.url + '/images/blog-cover.png'}}" />
+	<meta property="og:url" content="{{config.url + '/blog/'}}" />
+	<meta property="og:description" content="Sharing is caring.We happy to share all about the resources that help to build better work place. We also share our ideas, guide, and viewpoints from team and build up the culture, engagement." />
+
+	<!-- for Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Goalify Blog" />
+	<meta name="twitter:description" content="Sharing is caring.We happy to share all about the resources that help to build better work place. We also share our ideas, guide, and viewpoints from team and build up the culture, engagement." />
+	<meta name="twitter:image" content="{{config.url + '/images/blog-cover.png'}}" />
+{% endblock %}
+
 {% block hero-banner %}
 	{{ partial('_partial/hero-banner', {
 		page: {
