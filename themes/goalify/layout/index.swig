@@ -1,4 +1,25 @@
 {% extends 'base.swig' %}
+{% block meta %}
+	<title>Goalify Homepage</title>
+	<meta name="description" content="Reinventing the way your team work, focusing on achieving their goals, creating better working environment.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- for Google -->
+	<meta name="description" content="Reinventing the way your team work, focusing on achieving their goals, creating better working environment." />
+	<meta name="keywords" content="" />
+	<!-- for Facebook -->
+	<meta property="og:title" content="Goalify Homepage" />
+	<meta property="og:type" content="page" />
+	<meta property="og:image" content="{{config.url + '/images/home-cover.png'}}" />
+	<meta property="og:url" content="{{config.url}}" />
+	<meta property="og:description" content="Reinventing the way your team work, focusing on achieving their goals, creating better working environment." />
+
+	<!-- for Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Goalify Homepage" />
+	<meta name="twitter:description" content="Reinventing the way your team work, focusing on achieving their goals, creating better working environment." />
+	<meta name="twitter:image" content="{{config.url + '/images/home-cover.png'}}" />
+{% endblock %}
 
 {% block main %}
 	<div class="home">

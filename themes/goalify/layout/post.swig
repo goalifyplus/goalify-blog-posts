@@ -1,4 +1,25 @@
 {% extends 'base.swig' %}
+{% block meta %}
+	<title>{{page.title}} - Goalify Plus</title>
+	<meta name="description" content="{{ truncate(strip_html(page.content), {length: 180}) }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- for Google -->
+	<meta name="description" content="{{ truncate(strip_html(page.content), {length: 180}) }}" />
+	<meta name="keywords" content="" />
+	<!-- for Facebook -->
+	<meta property="og:title" content="{{page.title + ' - Goalify Plus'}}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="{{config.url + '/' + page.thumbnail}}" />
+	<meta property="og:url" content="{{config.url + '/' + page.path}}" />
+	<meta property="og:description" content="{{ truncate(strip_html(page.content), {length: 180}) }}" />
+
+	<!-- for Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{{page.title + ' - Goalify Plus'}}" />
+	<meta name="twitter:description" content="{{ truncate(strip_html(page.content), {length: 180}) }}" />
+	<meta name="twitter:image" content="{{config.url + '/' + page.thumbnail}}" />
+{% endblock %}
 {% block hero-banner %}
 	{{ partial('_partial/hero-banner', {
 		page: {
