@@ -7,6 +7,10 @@ const helper = hexo.extend.helper;
 hexo.extend.helper.register('relatedPost', (post, isNext = false) => {
 	const newData = post;
 	const site = hexo.locals.toObject();
+	const urlFor = helper.get('url_for');
+	const truncate = helper.get('truncate');
+	const stripHtml = helper.get('strip_html');
+
 	// Get all posts
 	const posts = site.posts.toArray();
 	let nextPost = null;
@@ -39,10 +43,12 @@ hexo.extend.helper.register('relatedPost', (post, isNext = false) => {
 	if (isNext) {
 		if (nextPost) {
 			return `
-				<div class="blog-detail__suggestion__item" style="background-image: url(${helper.get('url_for').call(hexo, nextPost.thumbnail)})">
-					<button class="btn btn--transparent blog-detail__suggestion__btn float lighter">Read this next</button>
+				<div class="blog-detail__suggestion__item" style="background-image: url(${urlFor.call(hexo, nextPost.thumbnail)})">
+					<a href="${urlFor.call(hexo, nextPost.path)}" class="btn btn--transparent blog-detail__suggestion__btn float lighter">Read this next</a>
 					<h4 class="blog-detail__suggestion__title float">${nextPost.title}</h4>
-					<p class="blog-detail__suggestion__desc float lighter">I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our</p>
+					<p class="blog-detail__suggestion__desc float lighter">
+						${truncate(stripHtml(nextPost.content), { length: 120 })}
+					</p>
 				</div>
 			`;
 		}
@@ -51,10 +57,12 @@ hexo.extend.helper.register('relatedPost', (post, isNext = false) => {
 
 	if (relatedPost) {
 		return `
-			<div class="blog-detail__suggestion__item" style="background-image: url(${helper.get('url_for').call(hexo, relatedPost.thumbnail)})">
-				<button class="btn btn--transparent blog-detail__suggestion__btn float lighter">You might enjoy</button>
+			<div class="blog-detail__suggestion__item" style="background-image: url(${urlFor.call(hexo, relatedPost.thumbnail)})">
+				<a href="${urlFor.call(hexo, relatedPost.path)}" class="btn btn--transparent blog-detail__suggestion__btn float lighter">You might enjoy</a>
 				<h4 class="blog-detail__suggestion__title float">${relatedPost.title}</h4>
-				<p class="blog-detail__suggestion__desc float lighter">I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our</p>
+				<p class="blog-detail__suggestion__desc float lighter">
+					${truncate(stripHtml(relatedPost.content), { length: 120 })}
+				</p>
 			</div>
 		`;
 	}
