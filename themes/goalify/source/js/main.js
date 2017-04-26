@@ -203,6 +203,7 @@ var goalify = goalify || {};
 		var priceResult = document.querySelector('.js-price-result');
 		var selectPriceYearly = document.querySelector('.js-select-price-yearly');
 		var selectPriceMonthly = document.querySelector('.js-select-price-monthly');
+		var pricePeriod = document.querySelector('.js-price-period');
 		var priceByMembers = priceSelection.children;
 		var priceByYearly = [100, 750, 1500, 3000, 4500, 7500, 15000];
 		var priceByMonthly = [8, 75, 150, 300, 450, 750, 1500];
@@ -212,6 +213,7 @@ var goalify = goalify || {};
 				priceByMembers[index].value = item;
 			});
 			priceResult.innerHTML = priceSelection.value;
+			pricePeriod.innerHTML = 'per year';
 		});
 
 		selectPriceMonthly.addEventListener('click', function() {
@@ -219,6 +221,7 @@ var goalify = goalify || {};
 				priceByMembers[index].value = item;
 			});
 			priceResult.innerHTML = priceSelection.value;
+			pricePeriod.innerHTML = 'per month';
 		});
 
 		priceSelection.addEventListener('change', function() {
