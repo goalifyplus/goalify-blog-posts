@@ -13,7 +13,10 @@ isTransparentHeader: true
 					<div class="pricing__package__header">
 						<h6 class="title">Small Teams</h6>
 						<span class="desc">We support team<br class="visible-md-block visible-lg-block"> with up to 10 members</span>
-						<div class="amount"><span class="currency">$</span>10</div>
+						<div class="price">
+							<span class="currency">$</span>
+							<span class="amount">10</span>
+						</div>
 						<span class="period-info">per month</span>
 					</div>
 					<div class="pricing__package__body">
@@ -41,15 +44,19 @@ isTransparentHeader: true
 							<label for="period-monthly" class="period__label">Monthly
 							</label>
 						</div>
-						<div class="amount"><span class="currency">$</span>4.8</div>
+						<div class="price">
+							<span class="currency">$</span>
+							<span class="amount js-price-result">100</span>
+						</div>
 						<div class="select-members">
-							<select>
-								<option value="15">15 users</option>
-								<option value="25">25 users</option>
-								<option value="50">50 users</option>
-								<option value="100">100 users</option>
-								<option value="500">500 users</option>
-								<option value="2000">2000 users</option>
+							<select class="js-price-selection">
+								<option value="100">1-10 users</option>
+								<option value="750">11-15 users</option>
+								<option value="1500">16-25 users</option>
+								<option value="3000">26-50 users</option>
+								<option value="4500">51-100 users</option>
+								<option value="7500">101-500 users</option>
+								<option value="15000">501-2000 users</option>
 							</select>
 						</div>
 						<span class="period-info">per month</span>

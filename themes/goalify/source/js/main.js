@@ -23,6 +23,7 @@ var goalify = goalify || {};
 
 	var howWeWork = document.querySelector('.how-we-work');
 	var contactUs = document.querySelector('.contact-us');
+	var pricing = document.querySelector('.pricing');
 
 	// ---------------------------- Utils -------------------------------
 	var numberWithCommas = function(x) {
@@ -195,6 +196,15 @@ var goalify = goalify || {};
 				});
 			});
 		}
+	}
+
+	if (pricing) {
+		var priceSelection = document.querySelector('.js-price-selection');
+		var priceResult = document.querySelector('.js-price-result');
+		priceSelection.addEventListener('change', function() {
+			console.log('test: ', priceSelection.value);
+			priceResult.innerHTML = priceSelection.value;
+		});
 	}
 
 	// script to open subcribe
