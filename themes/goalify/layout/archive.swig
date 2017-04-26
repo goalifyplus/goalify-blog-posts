@@ -68,7 +68,20 @@
 				</div>
 				<div class="register-form-horizontal__group-btn">
 					<input type="text" class="register__form" placeholder="name@yourcompany.com"></input>
-					<button class="btn btn--second ">Subcribe</button>
+					<button class="btn btn--second js-open-popup">Subcribe</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup">
+			<h4 class="popup__title">Thank you for your subcription!</h4>
+			<span class="popup__desc">We will share you more topic and our thinking!</span>
+			<span class="popup__close-btn js-close-popup"><i class="icon icon--close popup__close-icon"></i>Close</span>
+			<div class="register">
+				<h3 class="register__title">Ready to get started for free ?</h3>
+				<div class="register__form-wrapper">
+					<input type="text" class="register__form" placeholder="name@yourcompany.com"></input>
+					<button class="btn">Let started NOW!</button>
 				</div>
 			</div>
 		</div>

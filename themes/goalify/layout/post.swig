@@ -53,7 +53,7 @@
 			</div>
 		</section>
 		<div class="popup">
-			<h4 class="popup__title">Thank you for your subcribtion!</h4>
+			<h4 class="popup__title">Thank you for your subcription!</h4>
 			<span class="popup__desc">We will share you more topic and our thinking!</span>
 			<span class="popup__close-btn js-close-popup"><i class="icon icon--close popup__close-icon"></i>Close</span>
 			<div class="register">
