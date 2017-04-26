@@ -11,10 +11,31 @@
 		{% endif %}
 
 		<nav class="nav">
-			<a href="/products" class="nav__item">products</a>
-			<a href="/pricing" class="nav__item">pricing</a>
-			<a href="/about" class="nav__item">about</a>
-			<a href="/resources" class="nav__item">resources</a>
+			<a
+				href="/products"
+				class="nav__item
+					{% if page.name === 'products' %}
+						nav__item--active
+					{% endif %}
+				"
+			>products</a>
+			<a
+				href="/pricing"
+				class="nav__item
+					{% if page.name === 'pricing' %}
+						nav__item--active
+					{% endif %}
+				"
+			>pricing</a>
+			<a
+				href="/about"
+				class="nav__item
+					{% if page.name === 'about' %}
+						nav__item--active
+					{% endif %}
+				"
+			>about</a>
+			<a href="/#" class="nav__item">resources</a>
 			<a href="/login" class="nav__item nav__item--login">login</a>
 			<a href="/roi-calculation" class="nav__item nav__item--btn btn">Calculate ROI</a>
 		</nav>

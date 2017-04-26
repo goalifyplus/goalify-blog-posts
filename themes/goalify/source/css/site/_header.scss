@@ -1,3 +1,59 @@
+@keyframes navactive {
+	0% {
+		color: #08f6ff;
+	}
+
+	50% {
+		color: #c847e4;
+	}
+
+	100% {
+		color: #e73232;
+	}
+}
+
+@-webkit-keyframes navactive {
+	0% {
+		color: #08f6ff;
+	}
+
+	50% {
+		color: #c847e4;
+	}
+
+	100% {
+		color: #e73232;
+	}
+}
+
+@-o-keyframes navactive {
+	0% {
+		color: #08f6ff;
+	}
+
+	50% {
+		color: #c847e4;
+	}
+
+	100% {
+		color: #e73232;
+	}
+}
+
+@-moz-keyframes navactive {
+	0% {
+		color: #08f6ff;
+	}
+
+	50% {
+		color: #c847e4;
+	}
+
+	100% {
+		color: #e73232;
+	}
+}
+
 .header {
 	position: absolute;
 	top: 0;
@@ -39,6 +95,15 @@
 		color: $white;
 		padding: 15px 25px;
 		font-size: 1.4rem;
+		transition: color 0.3s ease;
+
+		&:hover, &--active {
+			animation-name: navactive;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-duration: 1s;
+			animation-direction: alternate;
+		}
 
 		&--login {
 			padding-left: 5rem;
