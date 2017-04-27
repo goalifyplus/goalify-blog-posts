@@ -97,11 +97,16 @@ var goalify = goalify || {};
 
 		var calculateSaving = function(form) {
 			// Get value from inputs
+			var max = Number(form.elements.reducePercent.max);
+			var expectValue = Number(form.elements.reducePercent.value);
 			var employeeNumber = form.elements.numberOfEmployee.value || 0;
 			var salary = form.elements.salary.value.replace(/,/g, '') || 0;
 			var turnoverPercent = form.elements.turnoverPercent.value || 0;
-			var expectPercent = form.elements.reducePercent.value || 0;
 			var currency = form.elements.currency.value || 'usd';
+			var expectPercent = max;
+			if (expectValue) {
+				expectPercent = max - expectValue;
+			}
 
 			// calculate roi
 			var actualTurnoverCost = calculateROI(employeeNumber, salary, turnoverPercent);
@@ -131,6 +136,20 @@ var goalify = goalify || {};
 			costGoingWithUs.innerText = '$ ' + annualCost[temp].cost + ' USD';
 		};
 
+		var setExpectPercentage = function(form, value, isReset) {
+			var flooredValue = Math.floor(value);
+			var maxPercent = document.getElementById('js-max-reduce-percentage');
+			var result = form.elements.result;
+			var resultContainer = result.parentElement;
+			var expectPercentageInput = form.reducePercent;
+			expectPercentageInput.max = isReset ? '100' : flooredValue;
+			expectPercentageInput.value = isReset ? '100' : '0';
+			maxPercent.innerText = flooredValue;
+			result.value = flooredValue + '%';
+			resultContainer.style.marginLeft = isReset ? '100%' : '0';
+			expectPercentageInput.disabled = isReset;
+		};
+
 		if (expectationReduceForm) {
 			var inputs = expectationReduceForm.querySelectorAll('.roi-form__input');
 			[].forEach.call(inputs, function(input) {
@@ -148,16 +167,16 @@ var goalify = goalify || {};
 			expectationReduceForm.addEventListener('input', function(e) {
 				var form = e.target.form;
 				var input = e.target;
+				var turnoverPercentValue = Math.floor(Number(form.turnoverPercent.value));
 				if (input.name === 'reducePercent') {
 					var result = form.elements.result;
 					var resultContainer = result.parentElement;
 					var valueFromTurnOverPercent = 1;
 					var max = Number(form.reducePercent.max);
-					if (form.turnoverPercent.value) {
-						valueFromTurnOverPercent = 100 / Math.floor(Number(form.turnoverPercent.value));
+					if (turnoverPercentValue) {
+						valueFromTurnOverPercent = 100 / turnoverPercentValue;
 					}
 					var percentageForMargin = input.value * valueFromTurnOverPercent;
-					console.log(max);
 					result.value = (max - input.value) + ' %';
 					resultContainer.style.marginLeft = percentageForMargin + '%';
 				}
@@ -167,10 +186,7 @@ var goalify = goalify || {};
 					input.value = convertedNumber;
 				}
 				if (input.name === 'turnoverPercent') {
-					var maxPercent = document.getElementById('js-max-reduce-percentage');
-					var value = input.value ? input.value : '100';
-					maxPercent.innerText = Math.floor(value);
-					form.reducePercent.max = value;
+					setExpectPercentage(form, turnoverPercentValue, turnoverPercentValue === 0);
 				}
 				input.setAttribute('value', input.value);
 				calculateSaving(form);
