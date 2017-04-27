@@ -8,7 +8,7 @@ var goalify = goalify || {};
 (function() {
 	'use strict';
 
-	var keyCodes = [8, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 190];
+	var keyCodes = [8, 9, 16, 35, 36, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 	var annualCost = [
 		{ min: 0, max: 0, cost: 0 },
 		{ min: 1, max: 10, cost: 100 },
@@ -144,7 +144,7 @@ var goalify = goalify || {};
 			var expectPercentageInput = form.reducePercent;
 			expectPercentageInput.max = isReset ? '100' : flooredValue;
 			expectPercentageInput.value = isReset ? '100' : '0';
-			maxPercent.innerText = flooredValue;
+			maxPercent.innerText = isReset ? '100' : flooredValue;
 			result.value = flooredValue + '%';
 			resultContainer.style.marginLeft = isReset ? '100%' : '0';
 			expectPercentageInput.disabled = isReset;
@@ -156,7 +156,11 @@ var goalify = goalify || {};
 				// prevent keycode not number
 				input.addEventListener('keydown', function(e) {
 					var event = e || window.event;
-					if (keyCodes.indexOf(event.keyCode) === -1) {
+					var temp = keyCodes.slice(0);
+					if (event.target.value.indexOf('.') < 0) {
+						temp.push(190);
+					}
+					if (temp.indexOf(event.keyCode) === -1) {
 						e.preventDefault();
 						return false;
 					}
