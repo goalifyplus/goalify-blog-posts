@@ -77,8 +77,8 @@ var goalify = goalify || {};
 
 		var turnoverCost = (hiring + onBoarding + development + unfulliedTime) * percent * n;
 		return {
-			turnoverCost,
-			rehireCost: hiring * percent * n,
+			turnoverCost: Math.round(turnoverCost),
+			rehireCost: Math.round(hiring * percent * n),
 		};
 	};
 
