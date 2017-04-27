@@ -141,17 +141,6 @@ var goalify = goalify || {};
 						e.preventDefault();
 						return false;
 					}
-
-				});
-
-				// set value attribute to keep label floating, add comma if salary input
-				input.addEventListener('keyup', function(e) {
-					var i = e.target;
-					if (i.name === 'salary') {
-						var convertedNumber = numberWithCommas(i.value.replace(/,/g, ''));
-						i.value = convertedNumber;
-					}
-					i.setAttribute('value', i.value);
 				});
 			});
 
@@ -162,9 +151,28 @@ var goalify = goalify || {};
 				if (input.name === 'reducePercent') {
 					var result = form.elements.result;
 					var resultContainer = result.parentElement;
-					result.value = input.value + ' %';
-					resultContainer.style.marginLeft = input.value + '%';
+					var valueFromTurnOverPercent = 1;
+					var max = Number(form.reducePercent.max);
+					if (form.turnoverPercent.value) {
+						valueFromTurnOverPercent = 100 / Math.floor(Number(form.turnoverPercent.value));
+					}
+					var percentageForMargin = input.value * valueFromTurnOverPercent;
+					console.log(max);
+					result.value = (max - input.value) + ' %';
+					resultContainer.style.marginLeft = percentageForMargin + '%';
 				}
+				// set value attribute to keep label floating, add comma if salary input
+				if (input.name === 'salary') {
+					var convertedNumber = numberWithCommas(input.value.replace(/,/g, ''));
+					input.value = convertedNumber;
+				}
+				if (input.name === 'turnoverPercent') {
+					var maxPercent = document.getElementById('js-max-reduce-percentage');
+					var value = input.value ? input.value : '100';
+					maxPercent.innerText = Math.floor(value);
+					form.reducePercent.max = value;
+				}
+				input.setAttribute('value', input.value);
 				calculateSaving(form);
 			});
 		}
@@ -231,7 +239,7 @@ var goalify = goalify || {};
 		});
 	}
 
-	// script to open subcribe
+	// script to open subscribe
 	var subscribeMailForm = document.getElementById('mail-subscribe-form');
 	if (subscribeMailForm) {
 		var popup = document.querySelector('.popup');
