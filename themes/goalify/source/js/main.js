@@ -94,6 +94,48 @@ var goalify = goalify || {};
 		var costGoingWithUs = document.getElementById('costGoingWithUs');
 		var employeeYouSave = document.getElementById('employeeYouSave');
 		var costRehireWithUs = document.getElementById('costRehireWithUs');
+		var oldData = {
+			num: 0,
+			salary: 0,
+			currency: 'usd',
+			percent: 0,
+			expect: 0
+		};
+
+		var isValidData = function(form) {
+			var employeeNumber = form.elements.numberOfEmployee.value;
+			var salary = form.elements.salary.value.replace(/,/g, '');
+			var turnoverPercent = Number(form.elements.turnoverPercent.value);
+
+			if (!employeeNumber || !salary || !turnoverPercent) {
+				return false;
+			}
+
+			if (employeeNumber < 2) {
+				return false;
+			}
+
+			if (salary < 500) {
+				return false;
+			}
+
+			if (turnoverPercent > 100) {
+				return false;
+			}
+			return true;
+		};
+
+		var compareObject = function(obj1, obj2) {
+			return JSON.stringify(obj1) === JSON.stringify(obj2);
+		};
+
+		var sendingRoiCalculationData = function(data) {
+			ajax(goalifyApiUrl + '/collect-roi-calculation-data', data, function() {
+				console.log('success');
+			}, function() {
+				console.log('fail');
+			});
+		};
 
 		var calculateSaving = function(form) {
 			// Get value from inputs
@@ -106,6 +148,23 @@ var goalify = goalify || {};
 			var expectPercent = max;
 			if (expectValue) {
 				expectPercent = max - expectValue;
+			}
+
+			clearTimeout(goalify.roiCalculationTimeout);
+			if (isValidData(form)) {
+				var newData = {
+					num: Number(employeeNumber),
+					salary: Number(salary),
+					currency,
+					percent: Number(turnoverPercent),
+					expect: Number(expectPercent)
+				};
+				goalify.roiCalculationTimeout = setTimeout(function() {
+					if (!compareObject(newData, oldData)) {
+						sendingRoiCalculationData(newData);
+						oldData = newData;
+					}
+				}, 12000);
 			}
 
 			// calculate roi
@@ -184,7 +243,8 @@ var goalify = goalify || {};
 					result.value = (max - input.value) + ' %';
 					resultContainer.style.marginLeft = percentageForMargin + '%';
 				}
-				// set value attribute to keep label floating, add comma if salary input
+				// set value attribute to keep label floating,
+				// add comma if salary input
 				if (input.name === 'salary') {
 					var convertedNumber = numberWithCommas(input.value.replace(/,/g, ''));
 					input.value = convertedNumber;
@@ -259,7 +319,7 @@ var goalify = goalify || {};
 		});
 	}
 
-	// script to open subscribe
+	// script to subscribe email
 	var subscribeMailForm = document.getElementById('mail-subscribe-form');
 	if (subscribeMailForm) {
 		var popup = document.querySelector('.popup');
@@ -287,7 +347,7 @@ var goalify = goalify || {};
 					emailInput.value = '';
 				}, function() {
 					alert('Failure');
-				})
+				});
 			}
 		});
 	}
