@@ -21,7 +21,7 @@ var goalify = goalify || {};
 	];
 	var teamsizes = ['1-10', '11-50', '51-100', '101-200', '>200'];
 	var goalifyContactUrl = 'https://script.google.com/macros/s/AKfycbz5oEQoNpz7Coinl_pLkcv0sQKqDd0XqHBsf_pFoZFYqjXej2s/exec';
-
+	var goalifyApiUrl = 'http://app.dev.goalify.plus/api';
 	var howWeWork = document.querySelector('.how-we-work');
 	var contactUs = document.querySelector('.contact-us');
 	var pricing = document.querySelector('.pricing');
@@ -232,25 +232,35 @@ var goalify = goalify || {};
 	}
 
 	// script to open subcribe
-	var popupOpenBtn = document.querySelector('.js-open-popup');
-	if (popupOpenBtn) {
+	var subscribeMailForm = document.getElementById('mail-subscribe-form');
+	if (subscribeMailForm) {
 		var popup = document.querySelector('.popup');
 		var popupCloseBtn = document.querySelector('.js-close-popup');
+		if (popupCloseBtn) {
+			popupCloseBtn.addEventListener('click', function() {
+				popup.style.opacity = 0;
+				document.body.style.overflow = 'auto';
+				setTimeout(function() {
+					popup.style.display = 'none';
+				}, 300);
+			});
+		}
 
-		popupCloseBtn.addEventListener('click', function() {
-			popup.style.opacity = 0;
-			document.body.style.overflow = 'auto';
-			setTimeout(function() {
-				popup.style.display = 'none';
-			}, 300);
-		});
-
-		popupOpenBtn.addEventListener('click', function() {
-			popup.style.display = 'flex';
-			setTimeout(function() {
-				popup.style.opacity = 1;
-				document.body.style.overflow = 'hidden';
-			}, 0);
+		subscribeMailForm.addEventListener('submit', function(e) {
+			e.preventDefault();
+			const emailInput = e.target.email;
+			if (emailInput) {
+				ajax(goalifyApiUrl + '/mail-subscribe', {email: emailInput.value}, function() {
+					popup.style.display = 'flex';
+					setTimeout(function() {
+						popup.style.opacity = 1;
+						document.body.style.overflow = 'hidden';
+					}, 0);
+					emailInput.value = '';
+				}, function() {
+					alert('Failure');
+				})
+			}
 		});
 	}
 }());

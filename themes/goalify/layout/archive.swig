@@ -90,10 +90,10 @@
 				<div class="register-form-horizontal__title">
 					<span class="common">Subcribe for more read</span>
 				</div>
-				<div class="register-form-horizontal__group-btn">
-					<input type="text" class="register__form" placeholder="name@yourcompany.com"></input>
-					<button class="btn btn--second js-open-popup">Subcribe</button>
-				</div>
+				<form class="register-form-horizontal__group-btn" id="mail-subscribe-form">
+					<input name="email" type="email" required class="register__form" placeholder="name@yourcompany.com"></input>
+					<button class="btn btn--second">Subcribe</button>
+				</form>
 			</div>
 		</div>
 
