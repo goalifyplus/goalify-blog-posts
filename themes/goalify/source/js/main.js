@@ -8,7 +8,7 @@ var goalify = goalify || {};
 (function() {
 	'use strict';
 
-	var keyCodes = [8, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 190];
+	var keyCodes = [8, 9, 16, 35, 36, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 	var annualCost = [
 		{ min: 0, max: 0, cost: 0 },
 		{ min: 1, max: 10, cost: 100 },
@@ -97,11 +97,16 @@ var goalify = goalify || {};
 
 		var calculateSaving = function(form) {
 			// Get value from inputs
+			var max = Number(form.elements.reducePercent.max);
+			var expectValue = Number(form.elements.reducePercent.value);
 			var employeeNumber = form.elements.numberOfEmployee.value || 0;
 			var salary = form.elements.salary.value.replace(/,/g, '') || 0;
 			var turnoverPercent = form.elements.turnoverPercent.value || 0;
-			var expectPercent = form.elements.reducePercent.value || 0;
 			var currency = form.elements.currency.value || 'usd';
+			var expectPercent = max;
+			if (expectValue) {
+				expectPercent = max - expectValue;
+			}
 
 			// calculate roi
 			var actualTurnoverCost = calculateROI(employeeNumber, salary, turnoverPercent);
@@ -131,27 +136,34 @@ var goalify = goalify || {};
 			costGoingWithUs.innerText = '$ ' + annualCost[temp].cost + ' USD';
 		};
 
+		var setExpectPercentage = function(form, value, isReset) {
+			var flooredValue = Math.floor(value);
+			var maxPercent = document.getElementById('js-max-reduce-percentage');
+			var result = form.elements.result;
+			var resultContainer = result.parentElement;
+			var expectPercentageInput = form.reducePercent;
+			expectPercentageInput.max = isReset ? '100' : flooredValue;
+			expectPercentageInput.value = isReset ? '100' : '0';
+			maxPercent.innerText = isReset ? '100' : flooredValue;
+			result.value = flooredValue + '%';
+			resultContainer.style.marginLeft = isReset ? '100%' : '0';
+			expectPercentageInput.disabled = isReset;
+		};
+
 		if (expectationReduceForm) {
 			var inputs = expectationReduceForm.querySelectorAll('.roi-form__input');
 			[].forEach.call(inputs, function(input) {
 				// prevent keycode not number
 				input.addEventListener('keydown', function(e) {
 					var event = e || window.event;
-					if (keyCodes.indexOf(event.keyCode) === -1) {
+					var temp = keyCodes.slice(0);
+					if (event.target.value.indexOf('.') < 0) {
+						temp.push(190);
+					}
+					if (temp.indexOf(event.keyCode) === -1) {
 						e.preventDefault();
 						return false;
 					}
-
-				});
-
-				// set value attribute to keep label floating, add comma if salary input
-				input.addEventListener('keyup', function(e) {
-					var i = e.target;
-					if (i.name === 'salary') {
-						var convertedNumber = numberWithCommas(i.value.replace(/,/g, ''));
-						i.value = convertedNumber;
-					}
-					i.setAttribute('value', i.value);
 				});
 			});
 
@@ -159,12 +171,28 @@ var goalify = goalify || {};
 			expectationReduceForm.addEventListener('input', function(e) {
 				var form = e.target.form;
 				var input = e.target;
+				var turnoverPercentValue = Math.floor(Number(form.turnoverPercent.value));
 				if (input.name === 'reducePercent') {
 					var result = form.elements.result;
 					var resultContainer = result.parentElement;
-					result.value = input.value + ' %';
-					resultContainer.style.marginLeft = input.value + '%';
+					var valueFromTurnOverPercent = 1;
+					var max = Number(form.reducePercent.max);
+					if (turnoverPercentValue) {
+						valueFromTurnOverPercent = 100 / turnoverPercentValue;
+					}
+					var percentageForMargin = input.value * valueFromTurnOverPercent;
+					result.value = (max - input.value) + ' %';
+					resultContainer.style.marginLeft = percentageForMargin + '%';
 				}
+				// set value attribute to keep label floating, add comma if salary input
+				if (input.name === 'salary') {
+					var convertedNumber = numberWithCommas(input.value.replace(/,/g, ''));
+					input.value = convertedNumber;
+				}
+				if (input.name === 'turnoverPercent') {
+					setExpectPercentage(form, turnoverPercentValue, turnoverPercentValue === 0);
+				}
+				input.setAttribute('value', input.value);
 				calculateSaving(form);
 			});
 		}
@@ -231,7 +259,7 @@ var goalify = goalify || {};
 		});
 	}
 
-	// script to open subcribe
+	// script to open subscribe
 	var subscribeMailForm = document.getElementById('mail-subscribe-form');
 	if (subscribeMailForm) {
 		var popup = document.querySelector('.popup');

@@ -44,18 +44,19 @@ isTransparentHeader: true
 						<div class="slider-wrapper">
 							<label class="slider-wrapper__title">Expectation reduce to</label>
 							<div class="slider-wrapper__range">
+								<span id="js-max-reduce-percentage">100</span>
 								<span>0</span>
-								<span>100</span>
 							</div>
 							<input class="slider-wrapper__input"
 								name="reducePercent"
 								type="range"
-								value="0"
+								value="100"
 								min="0"
 								max="100"
+								disabled
 							>
 							<div class="slider-wrapper__result-wrapper">
-								<span class="slider-wrapper__result-container">
+								<span class="slider-wrapper__result-container" style="margin-left: 100%">
 									<output name="result" class="slider-wrapper__result">0%</output>
 								</span>
 							</div>
