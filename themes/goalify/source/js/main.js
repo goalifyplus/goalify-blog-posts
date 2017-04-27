@@ -10,6 +10,7 @@ var goalify = goalify || {};
 
 	var keyCodes = [8, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 190];
 	var annualCost = [
+		{ min: 0, max: 0, cost: 0 },
 		{ min: 1, max: 10, cost: 100 },
 		{ min: 11, max: 15, cost: 750 },
 		{ min: 16, max: 25, cost: 1500 },
@@ -127,7 +128,7 @@ var goalify = goalify || {};
 					break;
 				}
 			}
-			costGoingWithUs.innerText = currencyText(symbol, currency, annualCost[temp].cost);
+			costGoingWithUs.innerText = '$ ' + annualCost[temp].cost + ' USD';
 		};
 
 		if (expectationReduceForm) {
