@@ -5,6 +5,8 @@ header:
   pricing: pricing
   about: about
   resources: resources
+  blog: blog
+  library: library
   login: login
   calculationRoi: calculation roi
 footer:
