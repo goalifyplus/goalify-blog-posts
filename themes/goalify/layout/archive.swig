@@ -41,23 +41,20 @@
 					<section class="blog__tags">
 						<ul class="blog__tags__wrapper">
 							<li class="blog__tags__item">
-								{% if page.category === '' %}
-									<a class="blog__tags__link active" href="{{ url_for_lang(config.archive_dir) }}">All</a>
+								{% if page.category === '' || page.category === 'blog'%}
+									<a class="blog__tags__link active" href="{{ url_for_lang('blog') }}">All</a>
 								{% else %}
-									<a class="blog__tags__link" href="{{ url_for_lang(config.archive_dir ) }}">All</a>
+									<a class="blog__tags__link" href="{{ url_for_lang('blog') }}">All</a>
 								{% endif %}
 							</li>
-							{% for tag in site.categories %}
-								{% set array = ['vi','en','blog'] %}
-								{% if array.indexOf(tag.name) === -1 %}
-									<li class="blog__tags__item">
-										{% if tag.name === page.category %}
-											<a class="blog__tags__link active" href="{{ url_for_lang(config.archive_dir + '/' + tag.name) }}">{{tag.name}}</a>
-										{% else %}
-											<a class="blog__tags__link" href="{{ url_for_lang(config.archive_dir + '/' + tag.name) }}">{{tag.name}}</a>
-										{% endif %}
-									</li>
-								{% endif %}
+							{% for tag in categories_list(page) %}
+								<li class="blog__tags__item">
+									{% if convert_category(tag) === page.category %}
+										<a class="blog__tags__link active" href="{{ url_for_lang('blog' + '/' + convert_category(tag)) }}">{{tag}}</a>
+									{% else %}
+										<a class="blog__tags__link" href="{{ url_for_lang('blog' + '/' + convert_category(tag)) }}">{{tag}}</a>
+									{% endif %}
+								</li>
 							{% endfor %}
 						</ul>
 					</section>

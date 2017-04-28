@@ -25,7 +25,7 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: blog/tags
-archive_dir: blog
+archive_dir: archive
 category_dir: /
 code_dir: downloads/code
 i18n_dir: :lang
@@ -52,6 +52,9 @@ highlight:
 default_category: uncategorized
 category_map:
 tag_map:
+category_list:
+  en: [Guideline, Product, OKR]
+  vi: [Hướng dẫn, Sản phẩm, OKR]
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
