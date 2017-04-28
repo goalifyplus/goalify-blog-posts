@@ -41,20 +41,23 @@
 					<section class="blog__tags">
 						<ul class="blog__tags__wrapper">
 							<li class="blog__tags__item">
-								{% if page.tag === '' %}
-									<a class="blog__tags__link active" href="{{ url_for_lang(config.archive_dir ) }}">All</a>
+								{% if page.category === '' %}
+									<a class="blog__tags__link active" href="{{ url_for_lang(config.archive_dir) }}">All</a>
 								{% else %}
 									<a class="blog__tags__link" href="{{ url_for_lang(config.archive_dir ) }}">All</a>
 								{% endif %}
 							</li>
-							{% for tag in site.tags %}
-								<li class="blog__tags__item">
-									{% if tag.name === page.tag %}
-										<a class="blog__tags__link active" href="{{ url_for_lang(tag.path ) }}">{{tag.name}}</a>
-									{% else %}
-										<a class="blog__tags__link" href="{{ url_for_lang(tag.path ) }}">{{tag.name}}</a>
-									{% endif %}
-								</li>
+							{% for tag in site.categories %}
+								{% set array = ['vi','en','blog'] %}
+								{% if array.indexOf(tag.name) === -1 %}
+									<li class="blog__tags__item">
+										{% if tag.name === page.category %}
+											<a class="blog__tags__link active" href="{{ url_for_lang(config.archive_dir + '/' + tag.name) }}">{{tag.name}}</a>
+										{% else %}
+											<a class="blog__tags__link" href="{{ url_for_lang(config.archive_dir + '/' + tag.name) }}">{{tag.name}}</a>
+										{% endif %}
+									</li>
+								{% endif %}
 							{% endfor %}
 						</ul>
 					</section>
