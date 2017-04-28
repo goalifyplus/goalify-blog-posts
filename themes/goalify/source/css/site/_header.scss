@@ -89,6 +89,12 @@
 	display: flex;
 	justify-content: flex-end;
 
+	&__item-container {
+		display: inline-flex;
+		justify-content: flex-end;
+		position: relative;
+	}
+
 	&__item {
 		text-transform: uppercase;
 		text-decoration: none;
