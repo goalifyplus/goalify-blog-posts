@@ -17,10 +17,13 @@ hexo.extend.helper.register('relatedPost', (post, isNext = false) => {
 	let relatedPost = null;
 
 	// sort post by date and find related posts using tags
+	const categories = newData.categories.toArray();
 	const relatedPosts = posts.sort((p1, p2) => p1.date < p2.date)
-		.filter((p) =>
-			p.tags.filter((n) =>
-				newData.tags.map(t => t.name).indexOf(n.name) > -1).length > 0);
+		.filter((p) => {
+			const c = p.categories.toArray();
+			console.log(c[c.length - 1]);
+			return categories[categories.length - 1].name === c[c.length - 1].name;
+		});
 
 	// find next posts if there is one and
 	// also remove next post and current post from related posts array

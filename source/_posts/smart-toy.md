@@ -3,7 +3,7 @@ title: Parihug Thú nhồi bông thông minh, giúp ôm người thân từ xa t
 thumbnail: images/avatar-post.jpeg
 authorName: Eric Tran
 date: 2017-04-19T18:46:28+07:00
-categories: [vi, blog, product]
+categories: [blog, product]
 ---
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 

@@ -5,7 +5,7 @@
 	left: 50%;
 	transform: translate(-50%, 0);
 	z-index: 3;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.4);
 	margin-top: 1rem;
 	border-radius: 5px;
 
@@ -17,7 +17,7 @@
 		margin-left: -8px;
 		width: 0;
 		height: 0;
-		border-bottom: 8px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 8px solid rgba(255, 255, 255, 0.4);
 		border-right: 8px solid transparent;
 		border-left: 8px solid transparent;
 	}
