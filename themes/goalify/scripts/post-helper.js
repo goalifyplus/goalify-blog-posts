@@ -21,7 +21,6 @@ hexo.extend.helper.register('relatedPost', (post, isNext = false) => {
 	const relatedPosts = posts.sort((p1, p2) => p1.date < p2.date)
 		.filter((p) => {
 			const c = p.categories.toArray();
-			console.log(c[c.length - 1]);
 			return categories[categories.length - 1].name === c[c.length - 1].name;
 		});
 
