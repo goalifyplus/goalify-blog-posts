@@ -12,32 +12,32 @@
 
 		<nav class="nav">
 			<a
-				href="/products"
+				href="{{ url_for_lang('products') }}"
 				class="nav__item
 					{% if page.name === 'products' %}
 						nav__item--active
 					{% endif %}
 				"
-			>products</a>
+			>{{__('header.products')}}</a>
 			<a
-				href="/pricing"
+				href="{{ url_for_lang('pricing') }}"
 				class="nav__item
 					{% if page.name === 'pricing' %}
 						nav__item--active
 					{% endif %}
 				"
-			>pricing</a>
+			>{{__('header.pricing')}}</a>
 			<a
-				href="/about"
+				href="{{ url_for_lang('about') }}"
 				class="nav__item
 					{% if page.name === 'about' %}
 						nav__item--active
 					{% endif %}
 				"
-			>about</a>
-			<a href="/#" class="nav__item">resources</a>
-			<a href="/login" class="nav__item nav__item--login">login</a>
-			<a href="/roi-calculation" class="nav__item nav__item--btn btn">Calculate ROI</a>
+			>{{__('header.about')}}</a>
+			<a href="/#" class="nav__item">{{__('header.resources')}}</a>
+			<a href="{{ url_for_lang('login') }}" class="nav__item nav__item--login">{{__('header.login')}}</a>
+			<a href="{{ url_for_lang('roi-calculation') }}" class="nav__item nav__item--btn btn">{{__('header.calculationRoi')}}</a>
 		</nav>
 	</div>
 </header>

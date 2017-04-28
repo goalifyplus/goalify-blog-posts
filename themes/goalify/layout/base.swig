@@ -67,7 +67,7 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="{{ url_for('js/main.js') }}"></script>
+	<script src="{{ url_for_lang('js/main.js') }}"></script>
 {% endblock %}
 
 	<script>
