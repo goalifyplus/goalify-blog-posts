@@ -21,6 +21,5 @@ const convertVietnamese = function(str) {
 
 hexo.extend.helper.register('convert_category', (category) => {
 	const newString = convertVietnamese(category);
-	console.log(newString);
 	return newString.replace(/ /g, '-');
 });

@@ -48,13 +48,15 @@
 								{% endif %}
 							</li>
 							{% for tag in categories_list(page) %}
-								<li class="blog__tags__item">
-									{% if convert_category(tag) === page.category %}
-										<a class="blog__tags__link active" href="{{ url_for_lang('blog' + '/' + convert_category(tag)) }}">{{tag}}</a>
-									{% else %}
-										<a class="blog__tags__link" href="{{ url_for_lang('blog' + '/' + convert_category(tag)) }}">{{tag}}</a>
-									{% endif %}
-								</li>
+								{% if check_category(site, convert_category(tag))%}
+									<li class="blog__tags__item">
+										{% if convert_category(tag) === page.category %}
+											<a class="blog__tags__link active" href="{{ url_for_lang('blog' + '/' + convert_category(tag)) }}">{{tag}}</a>
+										{% else %}
+											<a class="blog__tags__link" href="{{ url_for_lang('blog' + '/' + convert_category(tag)) }}">{{tag}}</a>
+										{% endif %}
+									</li>
+								{% endif %}
 							{% endfor %}
 						</ul>
 					</section>
