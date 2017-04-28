@@ -2,7 +2,15 @@
 	<div class="container-fluid container-fluid--fixed footer-container">
 		<div class="footer-container__language">
 			<i class="icon icon--bubble-message footer-container__language__icon"></i>
-			<span>English</span>
+			{% if lang === 'vi' %}
+				<a href="{{switch_lang('en')}}" class="footer-container__lang">
+					<span>English</span>
+				</a>
+			{% else %}
+				<a href="{{switch_lang('vi')}}" class="footer-container__lang">
+					<span>Tiếng Việt</span>
+				</a>
+			{% endif %}
 		</div>
 		<div class="footer-container__info">
 			<div class="footer-container__info-section">
