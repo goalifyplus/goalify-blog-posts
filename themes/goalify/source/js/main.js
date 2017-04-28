@@ -25,6 +25,7 @@ var goalify = goalify || {};
 	var howWeWork = document.querySelector('.how-we-work');
 	var contactUs = document.querySelector('.contact-us');
 	var pricing = document.querySelector('.pricing');
+	var dropDownTrigger = document.querySelectorAll('.js-trigger-dropdown');
 
 	// ---------------------------- Utils -------------------------------
 	var numberWithCommas = function(x) {
@@ -87,6 +88,16 @@ var goalify = goalify || {};
 	};
 
 	//------------------------- Main scripts ------------------------
+	if (dropDownTrigger && dropDownTrigger.length > 0) {
+		dropDownTrigger.forEach((dropDown) => {
+			dropDown.addEventListener('mouseenter', function(e) {
+				e.currentTarget.querySelector('.dropdown').classList.add('dropdown--active');
+			});
+			dropDown.addEventListener('mouseleave', function(e) {
+				e.currentTarget.querySelector('.dropdown').classList.remove('dropdown--active');
+			});
+		});
+	}
 	if (howWeWork) {
 		var expectationReduceForm = document.getElementById('roi-form');
 		var savingCost = document.getElementById('savingCost');

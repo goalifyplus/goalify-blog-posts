@@ -35,7 +35,7 @@
 					{% endif %}
 				"
 			>{{__('header.about')}}</a>
-			<div class="nav__item-container">
+			<div class="nav__item-container js-trigger-dropdown">
 				<a href="/#" class="nav__item">
 					{{__('header.resources')}}
 				</a>
