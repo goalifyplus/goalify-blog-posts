@@ -26,7 +26,7 @@
 		page: {
 			isHeroBannerHeader: true,
 			backgroundHeader: '/images/job-header-banner.jpg',
-			titleHeader: 'Let’s together build the great environment',
+			titleHeader: __('blog.bannerTitle'),
 			descHeaderFirst: 'Sharing is caring.',
 			descHeaderSecond: 'We happy to share all about the resources that help to build better work place. We also share our ideas, guide, and view from team and growing up the culture, engagment.'
 		}
@@ -42,17 +42,17 @@
 						<ul class="blog__tags__wrapper">
 							<li class="blog__tags__item">
 								{% if page.tag === '' %}
-									<a class="blog__tags__link active" href="{{ url_for(config.archive_dir ) }}">All</a>
+									<a class="blog__tags__link active" href="{{ url_for_lang(config.archive_dir ) }}">All</a>
 								{% else %}
-									<a class="blog__tags__link" href="{{ url_for(config.archive_dir ) }}">All</a>
+									<a class="blog__tags__link" href="{{ url_for_lang(config.archive_dir ) }}">All</a>
 								{% endif %}
 							</li>
 							{% for tag in site.tags %}
 								<li class="blog__tags__item">
 									{% if tag.name === page.tag %}
-										<a class="blog__tags__link active" href="{{ url_for(tag.path ) }}">{{tag.name}}</a>
+										<a class="blog__tags__link active" href="{{ url_for_lang(tag.path ) }}">{{tag.name}}</a>
 									{% else %}
-										<a class="blog__tags__link" href="{{ url_for(tag.path ) }}">{{tag.name}}</a>
+										<a class="blog__tags__link" href="{{ url_for_lang(tag.path ) }}">{{tag.name}}</a>
 									{% endif %}
 								</li>
 							{% endfor %}
@@ -61,11 +61,11 @@
 					<section class="blog__posts">
 						{% for item in page.posts %}
 							<div class="blog__post">
-								<a href="{{ url_for(item.path) }}">
+								<a href="{{ url_for_lang(item.path) }}">
 									<div class="blog__post__thumbnail" style="background-image: url({{ url_for(item.thumbnail) }})"></div>
 								</a>
 								<div class="blog__post__content">
-									<h4 class="blog__post__title"><a href="{{ url_for(item.path) }}" class="blog__post__link">{{item.title}}</a></h4>
+									<h4 class="blog__post__title"><a href="{{ url_for_lang(item.path) }}" class="blog__post__link">{{item.title}}</a></h4>
 									<p class="blog__post__intro">
 										{{ truncate(strip_html(item.content), {length: 180}) }}
 									</p>

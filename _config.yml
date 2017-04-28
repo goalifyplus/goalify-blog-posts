@@ -7,8 +7,12 @@ title: Goalify
 subtitle:
 description:
 author: Goalify Team
-language:
+language: [en, vi]
 timezone:
+
+i18n:
+  type: [page, post]
+  generator: [index, archive, tag]
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

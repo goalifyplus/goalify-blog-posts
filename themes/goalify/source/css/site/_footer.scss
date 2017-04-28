@@ -9,6 +9,16 @@
 	padding-bottom: 60px;
 	position: relative;
 
+	&__lang {
+		text-decoration: none;
+		color: $purple;
+
+		&:hover, &:focus {
+			color: $purple;
+			text-decoration: none;
+		}
+	}
+
 	&__info {
 		display: flex;
 	}
