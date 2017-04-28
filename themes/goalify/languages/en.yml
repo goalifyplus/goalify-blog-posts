@@ -7,3 +7,19 @@ header:
   resources: resources
   login: login
   calculationRoi: calculation roi
+footer:
+  home: Home
+  features: Features
+  pricing: Pricing
+  guide: Guide
+  getStarted: Get started
+  howItWork: How it work
+  support: Support
+  company: Company
+  about: About
+  jobs: Jobs
+  resource: Resource
+  press: Press
+  blog: Blog
+  webinar: Webinar
+  roiCalculation: ROI Calculation

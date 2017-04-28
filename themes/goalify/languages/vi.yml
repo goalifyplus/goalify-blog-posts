@@ -7,3 +7,19 @@ header:
   resources: Tài nguyên
   login: Đăng nhập
   calculationRoi: Tính ROI
+footer:
+  home: Trang chủ
+  features: Tính năng
+  pricing: Giá cả
+  guide: Hướng dẫn
+  getStarted: Bắt đầu
+  howItWork: Cách hoạt động
+  support: Hỗ trợ
+  company: Công ty
+  about: Về chúng tôi
+  jobs: Việc làm
+  resource: Tài nguyên
+  press: Báo chí
+  blog: Blog
+  webinar: Webinar
+  roiCalculation: Tính ROI
