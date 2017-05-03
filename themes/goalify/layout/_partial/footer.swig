@@ -25,7 +25,7 @@
 				<div class="footer-container__info-section__title">Goalify</div>
 				<ul class="footer-container__info-section__nav">
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('/')}}">{{__('footer.home')}}</a></li>
-					<li class="footer-container__nav-item">{{__('footer.features')}}</li>
+					<li class="footer-container__nav-item"><a href="{{url_for_lang('products')}}">{{__('footer.features')}}</a></li>
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('pricing')}}">{{__('footer.pricing')}}</a></li>
 				</ul>
 			</div>
