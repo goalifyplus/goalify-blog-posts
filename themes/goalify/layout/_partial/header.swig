@@ -38,7 +38,7 @@
 			<div class="nav__item-container js-trigger-dropdown">
 				<a href="/#"
 				class="nav__item
-					{% if page.name === 'resource' %}
+					{% if check_blog(page) || page.name === 'resource' %}
 						nav__item--active
 					{% endif %}
 				">

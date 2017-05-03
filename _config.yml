@@ -54,7 +54,7 @@ category_map:
 tag_map:
 category_list:
   en: [Guideline, Product, OKR]
-  vi: [Hướng dẫn, Sản phẩm, OKR]
+  vi: [Hướng dẫn, Sản phẩm]
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date

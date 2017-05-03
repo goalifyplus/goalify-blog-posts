@@ -35,6 +35,7 @@
 
 {% block main %}
 	<main class="blog">
+	<h1>{{check_archive(page)}}</h1>
 		<div class="container-fluid container-fluid--fixed">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
