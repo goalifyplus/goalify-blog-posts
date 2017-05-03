@@ -2,9 +2,9 @@ blog:
   bannerTitle: Hãy cùng xây dựng một môi trường tuyệt vời
 header:
   products: sản phẩm
-  pricing: Giá cả
-  about: Về chúng tôi
-  resources: Tài nguyên
+  pricing: Bảng giá
+  about: Giới thiệu
+  resources: Tài liệu
   blog: blog
   library: Thư viện
   login: Đăng nhập
@@ -23,5 +23,5 @@ footer:
   resource: Tài nguyên
   press: Báo chí
   blog: Blog
-  webinar: Webinar
+  library: Thư viện
   roiCalculation: Tính ROI

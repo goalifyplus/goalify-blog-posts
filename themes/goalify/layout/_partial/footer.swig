@@ -49,7 +49,7 @@
 				<div class="footer-container__info-section__title">{{__('footer.resource')}}</div>
 				<ul class="footer-container__info-section__nav">
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('blog')}}">{{__('footer.blog')}}</a></li>
-					<li class="footer-container__nav-item">{{__('footer.webinar')}}</li>
+					<li class="footer-container__nav-item">{{__('footer.library')}}</li>
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('roi-calculation')}}">{{__('footer.roiCalculation')}}</a></li>
 				</ul>
 			</div>
