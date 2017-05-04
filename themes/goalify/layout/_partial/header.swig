@@ -36,7 +36,12 @@
 				"
 			>{{__('header.about')}}</a>
 			<div class="nav__item-container js-trigger-dropdown">
-				<a href="/#" class="nav__item">
+				<a href="/#"
+				class="nav__item
+					{% if check_blog(page) || page.name === 'resource' %}
+						nav__item--active
+					{% endif %}
+				">
 					{{__('header.resources')}}
 				</a>
 				{% if page.isTransparentHeader %}

@@ -3,7 +3,7 @@
 		<div class="footer-container__language">
 			<i class="icon icon--bubble-message footer-container__language__icon"></i>
 			{% if lang === 'vi' %}
-				{% if is_category() %}
+				{% if is_category() || is_post() %}
 				<a href="{{url_for('blog')}}" class="footer-container__lang">
 				{% else %}
 				<a href="{{switch_lang('en')}}" class="footer-container__lang">
@@ -11,7 +11,7 @@
 					<span>English</span>
 				</a>
 			{% else %}
-				{% if is_category() %}
+				{% if is_category() || is_post() %}
 				<a href="{{url_for('/vi/blog')}}" class="footer-container__lang">
 				{% else %}
 				<a href="{{switch_lang('vi')}}" class="footer-container__lang">
@@ -25,7 +25,7 @@
 				<div class="footer-container__info-section__title">Goalify</div>
 				<ul class="footer-container__info-section__nav">
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('/')}}">{{__('footer.home')}}</a></li>
-					<li class="footer-container__nav-item">{{__('footer.features')}}</li>
+					<li class="footer-container__nav-item"><a href="{{url_for_lang('products')}}">{{__('footer.features')}}</a></li>
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('pricing')}}">{{__('footer.pricing')}}</a></li>
 				</ul>
 			</div>
@@ -49,12 +49,12 @@
 				<div class="footer-container__info-section__title">{{__('footer.resource')}}</div>
 				<ul class="footer-container__info-section__nav">
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('blog')}}">{{__('footer.blog')}}</a></li>
-					<li class="footer-container__nav-item">{{__('footer.webinar')}}</li>
+					<li class="footer-container__nav-item">{{__('footer.library')}}</li>
 					<li class="footer-container__nav-item"><a href="{{url_for_lang('roi-calculation')}}">{{__('footer.roiCalculation')}}</a></li>
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
-				<div class="footer-container__info-section__title">contact</div>
+				<div class="footer-container__info-section__title">{{__('footer.contact')}}</div>
 				<ul class="footer-container__info-section__nav">
 					<li class="footer-container__nav-item"><a href="mailto:Goalifyjsc@gmail.com">Email</a></li>
 					<li class="footer-container__nav-item"><a href="https://www.facebook.com/goalify.plus/">Facebook</a></li>

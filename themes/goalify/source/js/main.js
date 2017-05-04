@@ -87,6 +87,16 @@ var goalify = goalify || {};
 		return symbol + ' ' + numberWithCommas(value) + ' ' + currency;
 	};
 
+	var currentLang = function() {
+		var langs = ['en', 'vi'];
+		var url = window.location.pathname.split('/');
+		var lang = url[1];
+		if (langs.indexOf(lang) > -1) {
+			return lang;
+		}
+		return 'en';
+	};
+
 	//------------------------- Main scripts ------------------------
 	if (dropDownTrigger && dropDownTrigger.length > 0) {
 		dropDownTrigger.forEach((dropDown) => {
@@ -289,7 +299,11 @@ var goalify = goalify || {};
 
 				submit.disabled = true;
 				ajax(goalifyContactUrl, param, function() {
-					submit.textContent = 'Thank you';
+					if (currentLang() === 'vi') {
+						submit.textContent = 'Cảm ơn bạn';
+					} else {
+						submit.textContent = 'Thank you';
+					}
 				}, function() {
 					submit.disabled = false;
 					alert('Failure');
@@ -313,7 +327,11 @@ var goalify = goalify || {};
 				priceByMembers[index].value = item;
 			});
 			priceResult.innerHTML = priceSelection.value;
-			pricePeriod.innerHTML = 'per year';
+			if (currentLang() === 'vi') {
+				pricePeriod.innerHTML = 'mỗi năm';
+			} else {
+				pricePeriod.innerHTML = 'per year';
+			}
 		});
 
 		selectPriceMonthly.addEventListener('click', function() {
@@ -321,7 +339,11 @@ var goalify = goalify || {};
 				priceByMembers[index].value = item;
 			});
 			priceResult.innerHTML = priceSelection.value;
-			pricePeriod.innerHTML = 'per month';
+			if (currentLang() === 'vi') {
+				pricePeriod.innerHTML = 'mỗi tháng';
+			} else {
+				pricePeriod.innerHTML = 'per month';
+			}
 		});
 
 		priceSelection.addEventListener('change', function() {
