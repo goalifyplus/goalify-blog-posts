@@ -3,7 +3,7 @@
 		<div class="footer-container__language">
 			<i class="icon icon--bubble-message footer-container__language__icon"></i>
 			{% if lang === 'vi' %}
-				{% if is_category() %}
+				{% if is_category() || is_post() %}
 				<a href="{{url_for('blog')}}" class="footer-container__lang">
 				{% else %}
 				<a href="{{switch_lang('en')}}" class="footer-container__lang">
@@ -11,7 +11,7 @@
 					<span>English</span>
 				</a>
 			{% else %}
-				{% if is_category() %}
+				{% if is_category() || is_post() %}
 				<a href="{{url_for('/vi/blog')}}" class="footer-container__lang">
 				{% else %}
 				<a href="{{switch_lang('vi')}}" class="footer-container__lang">
