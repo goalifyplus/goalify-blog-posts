@@ -54,7 +54,7 @@
 				</ul>
 			</div>
 			<div class="footer-container__info-section">
-				<div class="footer-container__info-section__title">contact</div>
+				<div class="footer-container__info-section__title">{{__('footer.contact')}}</div>
 				<ul class="footer-container__info-section__nav">
 					<li class="footer-container__nav-item"><a href="mailto:Goalifyjsc@gmail.com">Email</a></li>
 					<li class="footer-container__nav-item"><a href="https://www.facebook.com/goalify.plus/">Facebook</a></li>

@@ -12,16 +12,17 @@ header:
 footer:
   home: Trang chủ
   features: Tính năng
-  pricing: Giá cả
+  pricing: Bảng giá
   guide: Hướng dẫn
-  getStarted: Bắt đầu
-  howItWork: Cách hoạt động
+  getStarted: Đăng ký dùng thử
+  howItWork: Hướng dẫn sử dụng
   support: Hỗ trợ
   company: Công ty
-  about: Về chúng tôi
-  jobs: Việc làm
+  about: Giới thiệu
+  jobs: Nghề nghiệp
+  press: Truyền thông báo chí
   resource: Tài nguyên
-  press: Báo chí
   blog: Blog
   library: Thư viện
   roiCalculation: Tính ROI
+  contact: Liên hệ
