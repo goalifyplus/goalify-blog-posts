@@ -3,7 +3,7 @@ title: Apple tuyển lập trình viên phát triển công cụ dựng phim 3D 
 thumbnail: images/avatar-post.jpeg
 authorName: Eric Tran
 date: 2017-04-19T18:46:28+07:00
-categories: [vn, blog, huong-dan]
+categories: [vi, blog, huong-dan]
 ---
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 
