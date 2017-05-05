@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: https://github.com/goalifyplus/goalify-blog-posts.git # Path to your Github repository
+  repo: https://github.com/goalifyplus/goalify-blog-posts # Path to your Github repository
   branch: master # Branch to update
   site_domain: goalify.netlify.com # Your Netlify site address if different from host
 publish_mode: editorial_workflow
