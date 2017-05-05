@@ -3,13 +3,14 @@
 		max-width: 1080px;
 		margin: 60px auto 150px;
 		background-color: $purple;
+		background-image: none;
 	}
 
 	&__revenue {
 		height: 100%;
 		margin-top: 150px;
 		background-image: linear-gradient(-224deg, #30C6D6 0%, #38CEAD 100%);
-		margin-bottom: 70px;
+		// margin-bottom: 70px;
 
 		&__image {
 			width: 100%;
@@ -22,19 +23,43 @@
 	}
 
 	&__register-bottom {
-		display: flex;
-		font-size: 30px;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 80px;
 
-		&__title {
-			> .highlight {
-				display: block;
-				line-height: 1.2;
-				color: #6772E5;
-			}
-		}
+	}
+}
+
+.hero-banner {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	padding-top: 14rem;
+	padding-bottom: 10rem;
+	overflow: hidden;
+
+	&__content {
+		position: relative;
+	}
+
+	&__title {
+		font-size: 48px;
+		font-weight: 300;
+		color: $white;
+		line-height: 1.41;
+		max-width: 56%;
+	}
+
+	&__desc {
+		color: $white;
+		max-width: 51rem;
+		margin-top: 25px;
+		font-size: 18px;
+		line-height: 1.56;
+		font-weight: 300;
+	}
+
+	&__image {
+		position: absolute;
+		right: -18rem;
+		top: 0;
+		width: 59%;
+		max-width: 70rem;
 	}
 }
 
@@ -92,7 +117,6 @@
 		}
 
 		&__more {
-			display: block;
 			margin-bottom: 35px;
 			color: #142696;
 		}

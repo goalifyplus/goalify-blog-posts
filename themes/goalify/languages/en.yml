@@ -1,0 +1,28 @@
+blog:
+  bannerTitle: Let’s together build the great environment
+header:
+  products: products
+  pricing: pricing
+  about: about
+  resources: resources
+  blog: blog
+  library: library
+  login: login
+  calculationRoi: calculation roi
+footer:
+  home: Home
+  features: Features
+  pricing: Pricing
+  guide: Guide
+  getStarted: Get started
+  howItWork: How it works
+  support: Support
+  company: Company
+  about: About
+  jobs: Jobs
+  press: Press
+  resource: Resource
+  blog: Blog
+  library: Library
+  roiCalculation: ROI Calculation
+  contact: Contact

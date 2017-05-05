@@ -1,30 +1,66 @@
+title: Contact Goalify
+imageUrl: /images/contact-cover.png
+url: /contact-us/
+description: Please submit your information and our team will following up with you Or just simply Chat with Us!
+isTransparentHeader: true
+---
 <div class="contact-us">
 	<h1 class="contact-us__title">Talk with our team</h1>
 	<p class="contact-us__desc">
 		Please submit your information and our team will following up with you <br>
 		Or just simply <span class="contact-us__desc__highlight">Chat with Us!</span>
 	</p>
-	<form class="contact-us__form">
+	<form id="contact-form" class="contact-us__form">
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input required type="text" name="name" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Name*</label>
 		</div>
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input required type="email" name="email" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Email*</label>
 		</div>
 		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+			<input required type="text" name="company" value="" onkeyup="this.setAttribute('value', this.value);">
 			<label>Company name*</label>
 		</div>
-		<div class="textfield textfield--float-label">
-			<input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
-			<label>My Size team is*</label>
+		<div class="textfield">
+			<div class="slider-wrapper">
+				<label class="slider-wrapper__title">My company size is</label>
+				<input class="slider-wrapper__input"
+					name="teamsize"
+					type="range"
+					value="0"
+					min="0"
+					max="4"
+					step="1"
+				>
+				<div class="slider-wrapper__range">
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">1-10</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">11-50</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">51-100</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">101-200</span>
+					</span>
+					<span class="slider-wrapper__step-wrapper">
+						<span class="slider-wrapper__step">>200</span>
+					</span>
+				</div>
+			</div>
 		</div>
 		<div class="textfield textfield--float-label">
-			<textarea onkeyup="this.setAttribute('value', this.value);"></textarea>
+			<input required type="text" name="subject" onkeyup="this.setAttribute('value', this.value);"></input>
+			<label>Subject*</label>
+		</div>
+		<div class="textfield textfield--float-label">
+			<textarea required name="detail" rows="5" onkeyup="this.setAttribute('value', this.value);"></textarea>
 			<label>Now let's us know what you need?*</label>
 		</div>
-		<button class="btn btn--purple contact-us__form__btn">Submit</button>
+		<button name="submit" class="btn btn--purple contact-us__form__btn">Submit</button>
 	</form>
 </div>

@@ -1,3 +1,10 @@
+name: pricing
+title: Goalify Pricing and Plans
+imageUrl: /images/pricing-cover.png
+url: /pricing/
+description: We support start-ups. Pay as you grow.
+isTransparentHeader: true
+---
 <div class="pricing">
 	<div class="pricing__header">
 		<h2 class="pricing__header__title">Pricing and Plans</h2>
@@ -10,7 +17,10 @@
 					<div class="pricing__package__header">
 						<h6 class="title">Small Teams</h6>
 						<span class="desc">We support team<br class="visible-md-block visible-lg-block"> with up to 10 members</span>
-						<div class="amount"><span class="currency">$</span>10</div>
+						<div class="price">
+							<span class="currency">$</span>
+							<span class="amount">10</span>
+						</div>
 						<span class="period-info">per month</span>
 					</div>
 					<div class="pricing__package__body">
@@ -29,30 +39,34 @@
 			<div class="col-xs-12 col-md-4">
 				<div class="pricing__package pricing__package--professional">
 					<div class="pricing__package__header">
-						<h6 class="title title--professional">Professtional</h6>
-						<div class="period">
-							<input type="radio" checked name="period" class="period__input" id="period-yearly"></input>
+						<h6 class="title title--professional">Professional</h6>
+						<form class="period">
+							<input type="radio" checked name="period" class="period__input js-select-price-yearly" id="period-yearly"></input>
 							<label for="period-yearly" class="period__label period__label--left">Yearly
 							</label>
-							<input type="radio" name="period" class="period__input" id="period-monthly">
+							<input type="radio" name="period" class="period__input js-select-price-monthly" id="period-monthly">
 							<label for="period-monthly" class="period__label">Monthly
 							</label>
+						</form>
+						<div class="price">
+							<span class="currency">$</span>
+							<span class="amount js-price-result">100</span>
 						</div>
-						<div class="amount"><span class="currency">$</span>4.8</div>
 						<div class="select-members">
-							<select>
-								<option value="15">15 users</option>
-								<option value="25">25 users</option>
-								<option value="50">50 users</option>
-								<option value="100">100 users</option>
-								<option value="500">500 users</option>
-								<option value="2000">2000 users</option>
+							<select class="js-price-selection">
+								<option value="100">1-10 users</option>
+								<option value="750">11-15 users</option>
+								<option value="1500">16-25 users</option>
+								<option value="3000">26-50 users</option>
+								<option value="4500">51-100 users</option>
+								<option value="7500">101-500 users</option>
+								<option value="15000">501-2000 users</option>
 							</select>
 						</div>
-						<span class="period-info">per month</span>
+						<span class="period-info js-price-period">per year</span>
 					</div>
 					<div class="pricing__package__body">
-						<h6 class="title">Everything in free, plus:</h6>
+						<h6 class="title">Everything in Free Features, plus:</h6>
 						<span class="benefit">Unlimited members</span>
 						<span class="benefit">Unlimited goal objectives </span>
 						<span class="benefit">Customized culture appreciation</span>
@@ -61,7 +75,7 @@
 					</div>
 					<div class="btn-register-group">
 						<button class="btn btn-register">Get Started</button>
-						<button class="btn btn--transparent btn-register--transparent">Calculate ROI</button>
+						<a href="/roi-calculation" class="btn btn--transparent btn-register--transparent">Calculate ROI</a>
 					</div>
 				</div>
 			</div>

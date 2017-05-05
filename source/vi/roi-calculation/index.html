@@ -1,0 +1,128 @@
+title: Goalify hoạt động như thế nào
+imageUrl: /images/calculate-roi-cover.png
+url: /vi/roi-calculation/
+description: Cái giá thật sự khi dùng Goalify. Nó có quá đắt hay không? Cùng tính xem nhé.
+isTransparentHeader: true
+---
+<div class="how-we-work">
+	<div class="how-we-work__header">
+		<div class="how-we-work__intro">
+			<h2 class="how-we-work__intro__title">Cái giá thật sự khi dùng Goalify </h2>
+			<span class="how-we-work__intro__desc">Nó có quá đắt hay không? Cùng tính xem nhé.</span>
+		</div>
+		<div class="how-we-work__calculate-saving container-fluid container-fluid--fixed">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<img src="/images/laptop.png" alt="" class="how-we-work__calculate-saving__photo">
+				</div>
+				<form id="roi-form" class="col-xs-12 col-sm-6 how-we-work__form">
+					<div class="how-we-work__calculate-saving__form">
+						<div class="textfield textfield--float-label">
+							<input type="text" name="numberOfEmployee" value="" class="roi-form__input">
+							<label>Số lượng nhân viên*</label>
+						</div>
+					</div>
+					<div class="how-we-work__calculate-saving__form">
+						<div class="textfield textfield--float-label">
+							<input type="text" name="salary" value="" class="roi-form__input">
+							<label>Lương trung bình hàng năm của 1 nhân viên*</label>
+						</div>
+						<div class="select-members">
+							<select name="currency">
+								<option value="usd">USD</option>
+								<option value="vnd">VND</option>
+							</select>
+						</div>
+					</div>
+					<div class="how-we-work__calculate-saving__form">
+						<div class="textfield textfield--float-label">
+							<input type="text" name="turnoverPercent" class="roi-form__input">
+							<label>Tỉ lệ nghỉ việc*</label>
+						</div>
+					</div>
+					<div class="how-we-work__calculate-saving__form">
+						<div class="slider-wrapper">
+							<label class="slider-wrapper__title">Mong muốn giảm tỉ lệ xuống còn</label>
+							<div class="slider-wrapper__range">
+								<span id="js-max-reduce-percentage">100</span>
+								<span>0</span>
+							</div>
+							<input class="slider-wrapper__input"
+								name="reducePercent"
+								type="range"
+								value="100"
+								min="0"
+								max="100"
+								disabled
+							>
+							<div class="slider-wrapper__result-wrapper">
+								<span class="slider-wrapper__result-container" style="margin-left: 100%">
+									<output name="result" class="slider-wrapper__result">0%</output>
+								</span>
+							</div>
+						</div>
+					</div>
+					<span>**10% là tỉ lệ vàng</span>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="how-we-work__banner">
+		<span class="how-we-work__banner__title">Tiết kiệm hàng năm với Goalify</span>
+		<span class="how-we-work__banner__saving-amount" id="savingCost">$ 0 USD</span>
+	</div>
+	<div class="how-we-work__saving-detail">
+		<div class="container-fluid container-fluid--fixed container-fluid--padding-col-25">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/dashboard.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="currentCostToRehire">$ 0 USD</span>
+							<p class="media__desc">Chi phí hiện tại để tuyển dụng lại </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/target.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="costGoingWithUs">$ 0 USD</span>
+							<p class="media__desc">Chi phí sử dụng Goalify</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/presentation.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="employeeYouSave">0</span>
+							<p class="media__desc">Số nhân viên giữ lại được</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/profile.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="costRehireWithUs">$ 0 USD</span>
+							<p class="media__desc">Chi phí tuyển dụng lại khi dùng Goalify</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="how-we-work__register-wrapper">
+		<div class="register-form-horizontal container-fluid container-fluid--fixed">
+			<div class="register-form-horizontal__title">
+				<span class="common">Đăng ký dùng thử</span>
+				<span>hoặc tạo tài khoản</span>
+			</div>
+			<div class="register-form-horizontal__group-btn">
+				<button class="btn btn--first">Đăng ký dùng thử</button>
+				<button class="btn btn--second ">Tạo tài khoản</button>
+			</div>
+		</div>
+	</div>
+</div>

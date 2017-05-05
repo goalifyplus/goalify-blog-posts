@@ -1,0 +1,80 @@
+.popup {
+	display: none;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(-134deg, #3023AE 0%, #C86DD7 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: 2;
+	color: $white;
+	transition: opacity 0.3s ease-in-out;
+
+	&__title {
+		font-size: 3rem;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+
+	&__desc {
+		font-size: 1.8rem;
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 9rem;
+		right: 15rem;
+		display: flex;
+		align-items: center;
+		font-weight: lighter;
+		cursor: pointer;
+	}
+
+	&__close-icon {
+		color: $tag-color;
+		font-size: 2.4rem;
+		margin-right: 5px;
+	}
+
+	.register {
+		background-image: none;
+		padding: 0;
+		padding-top: 4rem;
+		margin-top: 4rem;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 26rem;
+			height: 1px;
+			background-color: rgba(255, 255, 255, 0.2);
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		&__title {
+			font-size: 1.8rem;
+		}
+
+		&__form-wrapper {
+			margin-top: 4rem;
+
+			.register__form {
+				color: $black;
+			}
+		}
+
+		.btn {
+			background-color: $register-btn;
+		}
+	}
+}

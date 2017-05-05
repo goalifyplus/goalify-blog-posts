@@ -18,8 +18,13 @@
 // common elements styles
 @import 'common/button';
 @import 'common/register-form';
+@import 'common/register-form-horizontal';
 @import 'common/media';
 @import 'common/form';
+@import 'common/hero-banner';
+@import 'common/slider';
+@import 'common/popup';
+@import 'common/dropdown';
 
 //site
 @import 'site/header';
@@ -30,3 +35,8 @@
 @import 'site/job';
 @import 'site/career';
 @import 'site/contact-us';
+@import 'site/how-we-work';
+@import 'site/about-us';
+@import 'site/blog';
+@import 'site/blog-detail';
+@import 'site/resource';

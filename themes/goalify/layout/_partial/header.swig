@@ -1,17 +1,62 @@
-
+{% if page.isTransparentHeader %}
+<header class="header header--transparent">
+{% else %}
 <header class="header">
+{% endif %}
 	<div class="container-fluid container-fluid--fixed header__container">
-		<a href="/"><img src="/images/logo.svg" alt="Goalify Logo" class="header__container__logo"/></a>
+		{% if page.isTransparentHeader %}
+			<a href="/"><img src="/images/logo-colored.svg" alt="Goalify Logo" class="header__container__logo"/></a>
+		{% else %}
+			<a href="/"><img src="/images/logo.svg" alt="Goalify Logo" class="header__container__logo"/></a>
+		{% endif %}
+
 		<nav class="nav">
-			<a href="/products" class="nav__item">products</a>
-			<a href="/pricing" class="nav__item">pricing</a>
-			<a href="/about" class="nav__item">about</a>
-			<a href="/resources" class="nav__item">resources</a>
-			<a href="/login" class="nav__item nav__item--login">login</a>
-			<a href="/how-we-work" class="nav__item nav__item--btn btn">how we work</a>
+			<a
+				href="{{ url_for_lang('products') }}"
+				class="nav__item
+					{% if page.name === 'products' %}
+						nav__item--active
+					{% endif %}
+				"
+			>{{__('header.products')}}</a>
+			<a
+				href="{{ url_for_lang('pricing') }}"
+				class="nav__item
+					{% if page.name === 'pricing' %}
+						nav__item--active
+					{% endif %}
+				"
+			>{{__('header.pricing')}}</a>
+			<a
+				href="{{ url_for_lang('about') }}"
+				class="nav__item
+					{% if page.name === 'about' %}
+						nav__item--active
+					{% endif %}
+				"
+			>{{__('header.about')}}</a>
+			<div class="nav__item-container js-trigger-dropdown">
+				<a href="/#"
+				class="nav__item
+					{% if check_blog(page) || page.name === 'resource' %}
+						nav__item--active
+					{% endif %}
+				">
+					{{__('header.resources')}}
+				</a>
+				{% if page.isTransparentHeader %}
+				<div class="dropdown dropdown--transparent">
+				{% else %}
+				<div class="dropdown">
+				{% endif %}
+					<ul class="dropdown__list">
+						<li class="dropdown__list-item"><a href="{{url_for_lang('blog')}}" class="dropdown__list-item-link">{{__('header.blog')}}</a></li>
+						<li class="dropdown__list-item"><a href="{{url_for_lang('library')}}" class="dropdown__list-item-link">{{__('header.library')}}</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="{{ url_for_lang('login') }}" class="nav__item nav__item--login">{{__('header.login')}}</a>
+			<a href="{{ url_for_lang('roi-calculation') }}" class="nav__item nav__item--btn btn">{{__('header.calculationRoi')}}</a>
 		</nav>
-		<h1 class="header__container__title">Reinventing the way your team focusing into achieving their goal, create better working environement.</h1>
-		<p class="header__container__desc">SEN give leaders tools to increase employee retention, leverage up productivity, improve company culture and inspire employee personal branding.</p>
-		<img src="/images/macbook-air-perdoo.png" alt="Goalify image header" class="header__container__image"/>
 	</div>
 </header>

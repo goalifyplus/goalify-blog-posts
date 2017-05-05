@@ -1,8 +1,9 @@
 ---
 title: words
+thumbnail: images/avatar-post.jpeg
+authorName: Eric Tran
 date: 2017-02-19T16:50:45Z
-tags:
-  - Guideline
+categories: [blog, guideline]
 ---
 
 # Đây là một trang web.

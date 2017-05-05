@@ -1,0 +1,128 @@
+title: How Goalify work
+imageUrl: /images/calculate-roi-cover.png
+url: /roi-calculation/
+description: The “real cost” of using Goalify. Is It expensive when going with us?
+isTransparentHeader: true
+---
+<div class="how-we-work">
+	<div class="how-we-work__header">
+		<div class="how-we-work__intro">
+			<h2 class="how-we-work__intro__title">The “real cost” of using Goalify</h2>
+			<span class="how-we-work__intro__desc">Is It expensive when going with us?</span>
+		</div>
+		<div class="how-we-work__calculate-saving container-fluid container-fluid--fixed">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<img src="/images/laptop.png" alt="" class="how-we-work__calculate-saving__photo">
+				</div>
+				<form id="roi-form" class="col-xs-12 col-sm-6 how-we-work__form">
+					<div class="how-we-work__calculate-saving__form">
+						<div class="textfield textfield--float-label">
+							<input type="text" name="numberOfEmployee" value="" class="roi-form__input">
+							<label>Number of employees*</label>
+						</div>
+					</div>
+					<div class="how-we-work__calculate-saving__form">
+						<div class="textfield textfield--float-label">
+							<input type="text" name="salary" value="" class="roi-form__input">
+							<label>Average yearly salary of an employee*</label>
+						</div>
+						<div class="select-members">
+							<select name="currency">
+								<option value="usd">USD</option>
+								<option value="vnd">VND</option>
+							</select>
+						</div>
+					</div>
+					<div class="how-we-work__calculate-saving__form">
+						<div class="textfield textfield--float-label">
+							<input type="text" name="turnoverPercent" class="roi-form__input">
+							<label>Average yearly turnover rate*</label>
+						</div>
+					</div>
+					<div class="how-we-work__calculate-saving__form">
+						<div class="slider-wrapper">
+							<label class="slider-wrapper__title">Expect it reduce to</label>
+							<div class="slider-wrapper__range">
+								<span id="js-max-reduce-percentage">100</span>
+								<span>0</span>
+							</div>
+							<input class="slider-wrapper__input"
+								name="reducePercent"
+								type="range"
+								value="100"
+								min="0"
+								max="100"
+								disabled
+							>
+							<div class="slider-wrapper__result-wrapper">
+								<span class="slider-wrapper__result-container" style="margin-left: 100%">
+									<output name="result" class="slider-wrapper__result">0%</output>
+								</span>
+							</div>
+						</div>
+					</div>
+					<span>** 10% is golden rate</span>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="how-we-work__banner">
+		<span class="how-we-work__banner__title">Annual saving with Goalify</span>
+		<span class="how-we-work__banner__saving-amount" id="savingCost">$ 0 USD</span>
+	</div>
+	<div class="how-we-work__saving-detail">
+		<div class="container-fluid container-fluid--fixed container-fluid--padding-col-25">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/dashboard.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="currentCostToRehire">$ 0 USD</span>
+							<p class="media__desc">Current cost to rehire employees</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/target.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="costGoingWithUs">$ 0 USD</span>
+							<p class="media__desc">Cost when going with us</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/presentation.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="employeeYouSave">0</span>
+							<p class="media__desc">Employees you save</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<div class="media media--vertical">
+						<img src="/images/profile.svg" alt="" class="media__icon">
+						<div class="media__content">
+							<span class="media__title" id="costRehireWithUs">$ 0 USD</span>
+							<p class="media__desc">Rehiring cost when going with us</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="how-we-work__register-wrapper">
+		<div class="register-form-horizontal container-fluid container-fluid--fixed">
+			<div class="register-form-horizontal__title">
+				<span class="common">Ready to get started for free</span>
+				<span>or create an account</span>
+			</div>
+			<div class="register-form-horizontal__group-btn">
+				<button class="btn btn--first">Get started for FREE</button>
+				<button class="btn btn--second ">Sign up</button>
+			</div>
+		</div>
+	</div>
+</div>

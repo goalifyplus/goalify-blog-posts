@@ -1,0 +1,20 @@
+.register-form-horizontal {
+	display: flex;
+	font-size: 3rem;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6rem 2rem;
+
+	&__title {
+		color: $black;
+
+		.common {
+			display: block;
+			line-height: 1.2;
+		}
+
+		.highlight {
+			color: #6772E5;
+		}
+	}
+}

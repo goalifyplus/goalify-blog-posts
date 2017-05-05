@@ -1,10 +1,9 @@
 ---
 title: Sample blog post
+thumbnail: images/avatar-post.jpeg
+authorName: Eric Tran
 date: 2017-04-19T18:46:28+07:00
-tags:
-  - OKR
-  - Product
-  - Guideline
+categories: [blog, okr]
 ---
 Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 

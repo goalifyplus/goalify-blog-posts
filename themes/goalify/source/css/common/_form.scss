@@ -25,7 +25,7 @@
 	> input,
 	> textarea {
 		&:focus ~ label {
-			color: blue;
+			color: $black;
 		}
 	}
 }
@@ -39,7 +39,6 @@
 		// Typography
 		font-size: 16px;
 		line-height: 32px;
-		color: rgba(0, 0, 0, 0.26);
 
 		// Overflow policy
 		text-overflow: clip;

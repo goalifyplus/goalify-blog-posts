@@ -9,6 +9,7 @@ const runSequence = require('run-sequence');
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const fs = require('fs');
 
 // Auto load gulp plugins
 // gulp plugins are lazy loaded and auto attached to this `g` namspace
@@ -266,7 +267,23 @@ gulp.task('serve-public', ['watch'], () => {
 // ----------------------------------------------------------------------------
 gulp.task('generate', g.shell.task('hexo generate', { verbose: true }));
 
-
+/**
+ * Task: replace :lang/index.html
+ *
+ */
+gulp.task('fixIndex', (cb) => {
+	const viHomePath = 'public/vi/home.html';
+	const viIndexPath = 'public/vi/index.html';
+	if (fs.existsSync(viHomePath)) {
+		fs.unlink(viIndexPath, (err) => {
+			if (err) {
+				throw err;
+			}
+			fs.renameSync(viHomePath, viIndexPath);
+			cb();
+		});
+	}
+});
 
 /**
  * Task: build
@@ -275,7 +292,7 @@ gulp.task('generate', g.shell.task('hexo generate', { verbose: true }));
  */
 gulp.task('build', ['clean'], (cb) => {
 	mode = 'dist';
-	runSequence('styles', 'generate', cb);
+	runSequence('styles', 'generate', 'fixIndex', cb);
 });
 
 // FIXME: NOT tested

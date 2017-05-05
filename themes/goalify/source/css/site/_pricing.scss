@@ -1,5 +1,5 @@
 .pricing {
-	padding-top: 10rem;
+	padding-top: 18rem;
 
 	&__header {
 		text-align: center;
@@ -21,6 +21,10 @@
 
 	&__packages {
 		margin: 6rem auto;
+	}
+
+	&__package-image {
+		margin-top: 1rem;
 	}
 
 	&__package {
@@ -141,7 +145,7 @@
 				}
 
 				select {
-					width: 115%;
+					width: calc(100% + 2rem);
 					border: none;
 					background-color: transparent;
 					outline: none;
@@ -174,7 +178,7 @@
 				font-weight: lighter;
 			}
 
-			.amount {
+			.price {
 				display: inline-block;
 				position: relative;
 				font-size: 4.8rem;
